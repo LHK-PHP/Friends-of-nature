@@ -1,0 +1,151 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+body{
+	background-image: url(../../homeImg/3.JPG);/*背景图*/
+	background-size: cover;
+	background-repeat: no-repeat;   /*不重复*/
+   	overflow: hidden;
+}
+.log{
+	position: relative;
+	margin: 0 auto;
+	width: 800px;
+}
+.header{
+	position: absolute;
+	left: 330px;
+	top: 100px;
+	width: 200px;
+	height: 50px;
+	background-color: #8ecdde;
+	border-radius: 50px;
+	text-align: center;
+	font-size: 30px;	
+	color: royalblue;			
+}
+.user{
+	position: absolute;
+	top: 260px;
+	left: 150px;
+	width: 500px;
+	height: 10px;
+	font-size: 30px;
+	color: royalblue;
+}
+.user input{
+	width: 400px;
+	height: 50px;
+	background-color: #8ecdde;
+	border: none;
+	outline: none;
+	border-radius: 50px;
+}
+.email{
+	position: absolute;
+	top: 340px;
+	left: 150px;
+	width: 500px;
+	height: 10px;
+	font-size: 30px;
+	color: royalblue;
+}
+.email input{
+	width: 400px;
+	height: 50px;
+	background-color: #8ecdde;
+	border: none;
+	outline: none;
+	border-radius: 50px;
+}
+
+.password{
+	position: absolute;
+	top: 420px;
+	left: 150px;
+	width: 500px;
+	height: 10px;
+	font-size: 30px;
+	color: royalblue;
+}
+.password input{
+	width: 400px;
+	height: 50px;
+	background-color: #8ecdde;
+	border: none;
+	outline: none;
+	border-radius: 50px;
+}
+.phone{
+	position: absolute;
+	top:500px;
+	left: 150px;
+	width: 500px;
+	height: 10px;
+	font-size: 30px;
+	color: royalblue;
+}
+.phone input{
+	width: 400px;
+	height: 50px;
+	background-color: #8ecdde;
+	border: none;
+	outline: none;
+	border-radius: 50px;
+}
+.button{
+	position: absolute;
+	top: 600px;
+	left: 320px;
+	width: 200px;
+	height: 50px;
+	background-color: #8ecdde;
+	border-radius: 50px;
+}
+.button button{
+	outline: none;
+	border: none;
+	background-color: #8ecdde;
+	font-size: 30px;
+	margin-left: 40px;
+	margin-top: 3px;
+	color: royalblue;
+}
+.warning{
+	position: absolute;
+	top: 273px;
+	left:650px;
+	width: 200px;
+	height: 40px;
+	color: red;
+	text-align: center;
+}
+.warning-two{
+	position: absolute;
+	top: 353px;
+	left:650px;
+	width: 200px;
+	height: 40px;
+	color: red;
+	text-align: center;
+}
+.warning-three{
+	position: absolute;
+	top: 433px;
+	left:650px;
+	width: 200px;
+	height: 40px;
+	color: red;
+	text-align: center;
+}
+.warning-four{
+	position: absolute;
+	top: 513px;
+	left:650px;
+	width: 200px;
+	height: 40px;
+	color: red;
+	text-align: center;
+}
+

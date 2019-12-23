@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>义务支教</title>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/index.css">
+		<style type="text/css">
+			#header{
+				width: 100%;
+				height: 60px;
+				color: paleturquoise;
+				position: relative;
+				font-family: "宋体";
+				background-color: rgba(203,254,188,0.3);
+			}
+			.logo img{
+				width: 100px;
+				height: 60px;
+				top: 0px;
+				left: -17px;
+				position: absolute;
+				
+			}
+			.header-a{
+				width: 50%;
+				height: 40px;
+				top: 10px;
+				left:40%;
+				font-size: 20px;
+				position: absolute;
+			   text-align: center;
+			   margin: 0 auto;
+			   
+			}
+		  .phone{
+		  	    position: absolute;
+		  	    top: 5px;
+		  	    right:-85px;
+		  	    float: right;
+		  	    width: 150px;
+		  	    height: 30px;
+		  	    color: white;
+		  	    background-color: #91ca06;
+		  	    border-bottom-left-radius: 10px;
+		  	    border-bottom-right-radius: 10px;
+		  	    border-top-left-radius: 10px;
+		  	    border-top-right-radius: 10px;
+		  	    line-height: 30px;
+		  }
+		</style>
+	</head>
+	<body>
+		<!-- 主头部 -->
+		<div id="header">
+			<div class="logo">
+				<a href="contribute.html"><img src="../img/logo.png"/></a>
+			</div>
+			<div class="header-a">
+		       <div class="bs-example">
+				     <ul class="nav nav-pills" role="tablist">
+				      <li role="presentation" class="activ"><a  href="../../../index.html">首页</a></li>&nbsp;
+				      <li role="presentation" class="dropdown">
+				      <a id="drop4" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+				  联系我们
+				        <span class="caret"></span>
+				      </a>&nbsp;
+				       <ul id="menu1" class="dropdown-menu" aria-labelledby="drop4">
+				        <li><a href="../../../clothes recycling/show.html">爱心捐衣</a></li>
+				        <li><a href="../../../Public funds/show.html">公益资金</a></li>
+				        <li><a href="../../environment/index.html">保护环境</a></li>
+				        <li><a href="../index.html">义务支教</a></li>
+				        <li><a href="../../garbage/xiangmu.html">垃圾分类</a></li>
+				       </ul>
+		           </li>
+				     <li role="presentation" class="dropdown">
+				        <a id="drop5" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+				          加入我们
+				          <span class="caret"></span>
+				        </a>&nbsp;
+			          <ul id="menu2" class="dropdown-menu" aria-labelledby="drop5">
+			          <li><a id="company" onclick="alert('欢迎你的加入,具体请联系QQ:1649681210')">申请企业账户</a></li>
+			          </ul>
+			      </li>
+		        <li role="presentation" class="dropdown">
+		        <a id="drop6" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+		         登录
+		          <span class="caret"></span>
+		        </a>&nbsp;
+			   <ul id="menu3" class="dropdown-menu" aria-labelledby="drop6">
+			     <li id="login"><a>登录</a></li>		
+			   </ul>
+		       </li>
+		</ul> 
+		      </div> 
+		      <div class="phone">
+		      	<img class="phone1" src="../img/phone.png"/>
+		      	<span class="">400-260-0852</span>
+		      </div>
+		   </div>
+		</div>
+		
+		
+		<!-- 副头部 -->
+		<div class="heard">
+			<h1>爱心献社会</h1>
+			<h3 style="color:green;">义务支教</h3>
+			<h1>真情暖人心</h1>
+		</div>
+		<!-- 主体 -->
+		<div id="body">
+			<!-- 服务选择 -->
+			<div class="choice">
+				<h2 id="support" class="choice_support" style="border-bottom:3px solid rgba(0,100,0,0.5) ;">支教</h2>
+				<h2 id="study" class="choice_study">助学</h2>
+			</div>
+			<!-- 内容展示 -->
+			<div id="content"></div>
+		</div>
+		<!-- 尾部部分 -->
+		<div id="footer">
+			<h1>自然之友·爱心支教</h1>
+		</div>
+		
+
+		<script src="../js/jquery-3.4.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$('.dropdown-toggle').dropdown();
+				
+				$(".dropdown>li").mouseover(function(){
+					var $menu3 = $(this).children("#menu3");
+					$menu3.stop();
+					$menu3.slideDown(800);
+				});
+					$(".dropdown>li").mouseleave(function(){
+					var $menu3 = $(this).children("#menu3");
+					$menu3.stop();
+					$menu3.slideUp(800);
+				});
+				$('#menu3 #login').click(function(event) {
+			        if (sessionStorage.getItem('u_id') != null | sessionStorage.getItem('com_id') != null |sessionStorage.getItem('admin_id') != null ) {
+			            alert('已经登录,无需在登录!');
+			        }else{
+			            window.location.assign('../../../login and res/login.html');
+			        }
+			    });
+			});
+		</script>
+		<script type="text/javascript">
+			// 利用jquery框架
+			$(function(){
+				//初始化支教内容
+				get_ajax('support')
+				//设置choice选择点击效果
+				$('#body .choice').children().click(function(e){
+					//添加效果
+					$(this).siblings().css('border-bottom','');
+					$(this).css('border-bottom','3px solid rgba(0,100,0,0.5)');
+					//清空原有内容
+					$('#content').empty();
+					//调用后端函数
+					get_ajax($(this).attr('id'));
+				});
+				// 设置内容模块样式
+					// 设置内容标题和查看项目
+				$('#content').on("mouseover mouseout click",".content_side .context_skip",function(even) {
+					if(even.type == 'mouseover'){
+						$(this).css('color', 'rgba(0,100,0,0.5)');
+					}else if(even.type == 'mouseout'){
+						$(this).css('color', '');
+					}else if (even.type == 'click') {
+						var id = $(this).attr('id');
+						window.location.assign("../../../Content/educContent.html?id="+id);
+					}
+				});
+					// 设置内容块阴影
+				$('#content').on("mouseover mouseout",".content_side",function(even) {
+					if(even.type == 'mouseover'){
+						$(this).css('box-shadow', '3px 3px 4px rgba(0,200,0,0.3)');
+					}else if(even.type == 'mouseout'){
+						$(this).css('box-shadow','');
+					}
+				});
+			})
+			/**
+			 * AJAX请求后端
+			 * @param {String} direction 请求方向
+			 */
+			function get_ajax(direction){
+				//添加加载语句
+				var html = "<div style='width: 100%; color: rgb(0,100,0);text-align: center; font-family: myFirstFont;'><h2>正在加载中.... 请稍候。</h2><div>";
+				$(html).prependTo('#content');
+				//书写ajax代码
+				$.ajax({
+					type : 'get',
+					url :"../../../php/demo.php",
+					data : {
+						direction : direction
+					},
+					success : function(event){
+						//清空原有数据
+						$('#content').empty();
+						// 判断数据是否为空
+						if(event != '[]'){
+							var data =  $.parseJSON(event);
+							$.each(data,function( i , v ){
+							var html = "<div class='content_side'><div class='img'><img src='../../../updata/"+v.bri_img+"' width='100%' height='100%' style='border-radius: 10px;'></div><div class='text'><h4 class='title context_skip' id ="+v.id+">"+v.bri_title+"</h4><p style='font-size: 15px;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>"+v.bri_content+"</span></p><p class='skip context_skip' id ="+v.id+">点击阅读文章</p></div></div>";
+							$(html).prependTo('#content');
+							});
+						}else{
+							var html = "<div style='width: 100%; color: rgb(0,100,0);text-align: center; font-family: myFirstFont;'><h2>目前还没有内容哦，请留心关注。</h2><div>";
+							$(html).prependTo('#content');
+						}
+						
+					}
+				});
+			}
+		</script>
+	</body>
+</html>

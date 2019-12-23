@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>垃圾分类</title>
+	<link rel="stylesheet" type="text/css" href="xiangmu.css"/>
+	<script src="js/jquery-3.4.1.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+	<link rel="stylesheet" type="text/css" href="css/animate.css"/>
+	<link rel="stylesheet" type="text/css" href="css/animate.min.css"/>
+	<link rel="stylesheet" type="text/css" href="../../css/bootstrap.css"/>
+	<script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<style type="text/css">
+	 /* 尾部 */
+      #div1{
+        width: 100%;
+        height: 15vh;
+        margin-top: 3vh;
+		 background-color: #3B3B3B;
+        text-align: center;
+        line-height: 4vh;
+      }
+      #div1 p{
+        font-size: 12px;
+        color: #cbcbcb;
+      }
+      /* 垃圾识别 */
+      #rubbish{
+        width: 100px;
+      	height: 50px;
+      	position: fixed;
+      	top: 35vh;
+      	left: -65px;
+      	border-radius: 10px;
+      	background-color: #89c832a1;
+      	line-height: 50px;
+      	text-align: center;
+      	color: green;
+      }
+      #rubbish:hover{
+      	animation: myfirst 1s;
+      	left: 0;
+      }
+      @keyframes myfirst
+		{
+		    0% {left:-65px;}
+		    100% {left:0px;}
+		}
+   </style>
+</head>
+<body>
+<!--头部-->
+<div id="header">
+	<div class="logo">
+		<a href="../../index.html"><img src="../../image/logo.png"/></a>
+	</div>
+	<div class="header-a">
+		<div class="bs-example">
+			<ul class="nav nav-pills" role="tablist">
+				<li role="presentation" class="activ"><a href="../../index.html">首页</a></li>&nbsp;
+				<li role="presentation" class="dropdown">
+					<a id="drop4" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+						项目列表
+						<span class="caret"></span>
+					</a>&nbsp;
+					<ul id="menu1" class="dropdown-menu" aria-labelledby="drop4">
+						<li><a href="../../Public%20funds/show.html">公益资金</a></li>
+						<li><a href="../../clothes%20recycling/show.html">爱心捐衣</a></li>
+						<li><a href="../../project/environment/index.html">保护环境</a></li>
+						<li><a href="../../project/education/index.html">义务支教</a></li>
+						<li><a href="../../project/garbage/xiangmu.html">垃圾分类</a></li>
+					</ul>
+				</li>
+				<li role="presentation" class="dropdown">
+					<a id="drop5" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+						加入我们
+						<span class="caret"></span>
+					</a>&nbsp;
+					<ul id="menu2" class="dropdown-menu" aria-labelledby="drop5">
+						<li><a id="company" onclick="alert('欢迎你的加入,具体请联系QQ:1649681210')">申请企业账户</a></li>
+					</ul>
+				</li>
+				<li role="presentation" class="dropdown">
+					<a id="drop6" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+						登录
+						<span class="caret"></span>
+					</a>&nbsp;
+					<ul id="menu3" class="dropdown-menu" aria-labelledby="drop6">
+						<li id="login"><a>登录</a></li>
+
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="phone">
+			<img class="phone1" src="../../image/phone.png"/>
+			<span class="">400-260-0852</span>
+		</div>
+	</div>
+</div>
+<!-- ---------垃圾在线识别 -->
+<div id="rubbish">
+	<p>垃圾在线识别</p>
+</div>
+<!------------分割线------------->
+	<div id="box1" >
+		<img src="img/logo.png"/>
+		<ul id="wrap">
+			<li id="dli"><a href="">干湿分类</a>
+			</li>
+			<li id="dli1"><a href="">传统分类</a>
+			</li>
+			<li id="dli2"><a href="">垃圾分类知识</a>
+			</li>
+			<li><a href="">垃圾分类城市</a></li>
+			<li><a href="">垃圾分类资讯</a></li>
+			<li><a href="">问答社区</a></li>
+		</ul>
+	</div>
+	
+	<div id="box2">
+			
+		<div id="d4">
+			<img src="img/a1.png"/>
+			<img src="img/a2.jpg"/>
+			<img src="img/a3.jpg"/>
+			<img src="img/a4.jpg"/>
+			<span id="lt"><a href="">&lt;</a></span>
+			<span id="gt"><a href="">&gt;</a></span>
+		</div>
+		<div id="btn">
+			<span>1</span>
+			<span>2</span>
+			<span>3</span>
+			<span>4</span>
+		</div>
+		<div id="d5">
+			<img src="img/d1.jpg" id="img1"/>
+			<span id="a1"><a href="../../login and res/login.html">Hi,请登录</a></span>
+			<span id="a2"><a href="#">会员中心</a></span>
+			<span id="a3"><a href="">发布信息</a></span>
+			<span id="a4"><a href="">商户后台</a></span>
+			<div id="d6">
+				<span class="v3"><a href="">网站动态</a></span>
+				<span class="v3"><a href="">我是买家</a></span>
+				<span class="v3"><a href="">我是卖家</a></span>
+			</div>
+			<div id="ad" class="v1"></div>
+			<div id="d7" class="v1">
+				<span>搜索产品</span>
+				<span>我的订单</span>
+				<span>发布求购</span>
+			</div>
+			<div id="d8" class="v1">
+				<span>完善商铺</span>
+				<span>发布产品</span>
+				<span>订单管理</span>
+			</div>
+			<div id="d9">
+				<span id="c1" class="v2"></span>
+				<span id="c2" class="v2"></span>
+				<span id="c3" class="v2"></span>
+			</div>
+				
+		</div>
+		
+	</div>
+	<div id="box3">
+		<div id="good">垃圾分类的好处</div>
+
+		<div id="bad">不垃圾分类的坏处</div>
+		<p id="p1">“将垃圾分为有害垃圾、可回收垃圾、厨房垃圾和其他垃圾,分别对应红色、蓝色、绿色以及黄色四种颜色垃圾桶,并免费提供可降解的厨余垃圾垃圾袋。垃圾分类已经覆盖了杭州98%的生活小区,一年93万吨垃圾进入可回收渠道,但推行情况却并不乐观,倒是让各种颜色的垃圾桶占了风头。 即使居民分类捡运,但也没有回收利用的地方。大部分垃圾都有两个去向,能烧的都送到发电厂焚烧,烧不了的就送到垃圾填埋场,这也就意味着前期居民及运输环节均做了无用功。经费不足也是垃圾分类工作迟迟不能推行的原因之一。有业内人士算了笔账,以广州为例,如果持续3至4年,仅垃圾袋就需14亿元,以200人配1名指导员计算,广州市1800万人,每年需花费40亿元。这样的投入,即便对于发达城市来说,几乎也是不可想象的。 环卫部门和一些相关专家提出,要真正使得垃圾分类成为长效机制,不仅要“政府重视,财政投入,科技...”</p>
+		<p id="p2">
+			一、侵占土地。生活垃圾中有些物质不易降解，使土地受到严重侵蚀。
+二、造成环境污染。废弃的电池含有金属汞、镉等有毒的物质，会对人类产生严重的危害；土壤中的废塑料会导致农作物减产；抛弃的废塑料被动物误食，导致动物死亡的事故时有发生。
+三、浪费资源。中国每年使用塑料快餐盒达40亿个，方便面碗5—7亿个，一次性筷子数十亿双，这些占生活垃圾的8—15%。1吨废塑料可回炼600公斤的柴油。回收1500吨废纸，可免于砍伐用于生产1200吨纸的林木。一吨易拉罐熔化后能结成一吨很好的铝块，可少采20吨铝矿。生活垃圾中有30%—40%可以回收利用，如果不进行分类处理，这些资源会被视为垃圾。
+四、因此，我们要做到分类处理垃圾，提高垃圾的资源价值和经济价值，力争物尽其用
+		</p>
+	</div>
+<div class="container">
+	<div class="row">
+	  <div class="col-md-6 col-sm-12">
+	  	<img src="img/p1.jpg" class="img1">
+	  	<p>可回收物就是可以再生循环的垃圾。本身或材质可再利用的纸类、硬纸板、玻璃、塑料、金属、塑料包装，与这些材质有关的如：报纸、杂志、广告单及其它干净的纸类等皆可回收。</p>
+	  </div>
+	  <div class="col-md-6 col-sm-12">
+	  	<img src="img/p2.jpg" class="img2">
+	  	<p>有害垃圾指废电池、废灯管、废药品、废油漆及其容器等对人体健康或者自然环境造成直接或者潜在危害的生活废弃物。
+常见包括废电池、废荧光灯管、废灯泡、废水银温度计、废油漆桶、过期药品等。有害有毒垃圾需特殊正确的方法安全处理。</p>
+	  </div>
+	</div>
+	<div class="row">
+		<div class="col-md-6 col-sm-12">
+			<img src="img/p3.jpg" class="img3">
+			<p>厨余垃圾是指居民日常生活及食品加工、饮食服务、单位供餐等活动中产生的垃圾，包括丢弃不用的菜叶、剩菜、剩饭、果皮、蛋壳、茶渣、骨头等，其主要来源为家庭厨房、餐厅、饭店、食堂、市场及其他与食品加工有关的行业</p>
+		</div>
+		<div class="col-md-6 col-sm-12">
+			<img src="img/p4.jpg" class="img4">
+			<p>其他垃圾：危害较小，但无再次利用价值，如建筑垃圾类，生活垃圾类等，一般采取填埋、焚烧、卫生分解等方法，部分还可以使用生物解决，如放蚯蚓等。是可回收垃圾、厨余垃圾、有害垃圾剩余下来的一种垃圾。
+</p>
+		</div>
+		<div></div>
+	</div>
+</div>
+
+
+<!-- 尾部 -->
+<div id="div1" style="">
+      <p class="db">© 2013-2019 zrzy.com &nbsp;&nbsp;&nbsp;版权所有 ICP证：京ICP备14000186号-10</p>
+      <p class="db"><img src="../../homeImg/ZQQ5OB3U}~J@T6}9PV@YWCW.png"/>京公网安备11010102002019&nbsp;&nbsp;&nbsp;建议使用1024*768以上分辨率浏览</p>
+      <p class="db">互联网违法和不良信息举报中心:0571-81683755 &nbsp;&nbsp;&nbsp;blxx@list.alibaba-inc.com</p>
+    
+    </div>
+
+	<script type="text/javascript">
+		//垃圾在线识别
+		$('#rubbish').click(function(event) {
+			window.location.assign('rubbish/demo.html');
+		});
+		//主体内容
+		var nm=0;
+		var v1=document.getElementsByClassName('v1');
+		var v2=document.getElementsByClassName('v2');
+		var v3=document.getElementsByClassName('v3');
+		var good=document.getElementById("good");
+		var bad=document.getElementById("bad");
+		var p1=document.getElementById("p1");
+		var p2=document.getElementById("p2");
+		p2.style.display="none";
+		good.onclick=function(){
+			p1.style.display="block";
+			p2.style.display="none";
+		}
+		bad.onclick=function(){
+			p1.style.display="none";
+			p2.style.display="block";
+		}
+//		console.log(v3);
+		setInterval(function(){
+			for(var i=0;i<v1.length;i++){
+				if(nm==i){
+					v1[nm].style.display="block";
+					v2[nm].style.backgroundColor="white";
+					v1[nm].style.borderTop="1px solid black";
+					v3[nm].style.borderTop="";
+					v3[nm].style.borderRight="";
+					v3[nm].style.borderLeft="";
+				}else{
+					v1[i].style.display="none";
+					v2[i].style.backgroundColor = '';
+					v3[i].style.borderTop="1px solid white";
+					v3[i].style.borderRight="1px solid white";
+					v3[i].style.borderLeft="1px solid white";
+				}
+				
+			}
+			nm++;
+			if(nm==3){
+				nm=0;
+			}
+		},1000);
+		$(function(){
+			var num=0;
+			function change(num){
+				$('#d4 img').eq(num).fadeIn().siblings('img').fadeOut();
+				$('#btn span').eq(num).css('background-color','yellow').siblings().css('background-color','gray');
+			}
+			function add(){
+				num++;
+				if(num>3){
+					num=0;
+				}
+				change(num);
+			}
+			setInterval(add,1000);
+	
+			function jian(){
+				num--;
+				if(num<0){
+					num=3;
+				}
+				change(num);
+			}
+			$('#gt').click(add);
+			$('#lt').click(jian);
+			
+			$('#btn span').click(function(){
+				var index=$('#btn span').index(this);
+//				console.log(index);
+				$('#d4 img').eq(index).fadeIn(0.6).siblings('img').fadeOut(0.5);
+				$('#btn span').eq(index).css('background-color','yellow').siblings().css('background-color','gray');
+			})
+			$('#menu3 #login').click(function(event) {
+		        if (sessionStorage.getItem('u_id') != null | sessionStorage.getItem('com_id') != null |sessionStorage.getItem('admin_id') != null ) {
+		            alert('已经登录,无需在登录!');
+		        }else{
+		            window.location.assign('../../login and res/login.html');
+		        }
+		    });
+		})
+	</script>
+</body>
+</html>

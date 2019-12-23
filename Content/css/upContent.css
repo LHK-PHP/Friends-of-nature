@@ -1,0 +1,262 @@
+/* 整体css */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: rgba(215, 234, 255, 0.5);
+}
+
+@font-face {
+	font-family: myFirstFont;
+	src: url('../../Font/Deng.ttf');
+}
+@font-face {
+	font-family: myLogoFont;
+	src: url('../../Font/FZSTK.TTF');
+}
+
+/* 头部 */
+#heard {
+	width: 90%;
+	height: 5vh;
+	margin: 10px auto;
+	text-align: center;
+	line-height: 5vh;
+	font-family: myLogoFont;
+	background-color: rgba(255, 255, 255,0.3);
+	border-radius: 15px;
+	color: #6495ed;
+}
+/* 选择项目类型和时间 */
+#sort{
+	width: 80%;
+	height: 5vh;
+	margin: 3vh auto;
+	border: 1px solid rgba(0, 140, 0);
+	display: flex;
+	justify-content: space-around;
+	line-height: 5vh;
+	font-size: 14px;
+	color: rgba(0, 140, 0);
+	background-color: rgba(255, 255, 255,0.3);
+	border-radius: 5px;
+
+}
+#sort input{
+	border: 1px solid rgba(0, 140, 0);
+	background-color: transparent;
+	color: rgba(0, 140, 0);
+	height: 3vh;
+	font-size: 15px;
+	border-radius: 4px;
+	padding-left: 3px;
+}
+/* 项目简介 */
+#brief,#content {
+	width: 80%;
+	min-height: 33vh;
+	border: 1px solid rgb(196, 227, 243);
+	margin: 0 auto;
+	border-radius: 15px;
+	background-color: rgba(255, 255, 255,0.3);
+	padding-bottom:10px ;
+}
+
+#brief .heard,
+#content .heard {
+	width: 100%;
+	height: 15%;
+	font-size: 30px;
+	text-align: center;
+	margin-bottom: 5px;
+	color: rgba(100, 149, 237, 0.8);
+}
+
+#brief .brief_content {
+	width: 90%;
+	min-height: 25.5vh;
+	margin: 10px auto;
+	display: flex;
+	justify-content: center;
+
+
+}
+
+#brief .brief_content .brief_img {
+	width: 45%;
+	height: 25.5vh;
+	display: inline-block;
+	position: relative;
+}
+
+#brief .brief_content .brief_img #brief_img {
+	max-width: 60%;
+	height: 98%;
+	border-radius: 15px;
+}
+
+#brief .brief_content .brief_img .img_button {
+	width: 100px;
+	height: 100px;
+	border-style: none;
+	margin-left: 20px;
+	font-size: 18px;
+	color: cornflowerblue;
+	background-color: rgb(196, 227, 243, 0.5);
+	position: relative;
+
+}
+
+#brief .brief_content .brief_img #updata_img_brief{
+	position: absolute;
+	top: 45%;
+	left: 0;
+	width: 100px;
+	width: 100px;
+	opacity: 0;
+
+}
+
+#brief .brief_content .brief_text {
+	width: 45%;
+	padding: 0 30px;
+}
+
+#brief .brief_content .brief_text h3 {
+	text-align: center;
+}
+
+#brief .brief_content .brief_text .title {
+	width: 100%;
+	height: 30px;
+	margin: 10px 0;
+	text-align: center;
+	font-size: 18px;
+	background-color: transparent;
+	border-style: none;
+	border: 1px solid #C4E3F3;
+}
+
+#brief .brief_content .brief_text .content {
+	width: 100%;
+	height: 100px;
+	margin: 10px 0;
+	border: 1px solid #C4E3F3;
+	overflow-x:auto;
+}
+	/* 滑动条样式 */
+#brief .brief_content .brief_text .content::-webkit-scrollbar {
+  width: 4px;
+}
+#brief .brief_content .brief_text .content::-webkit-scrollbar-thumb {
+  background-color: #C4E3F3;
+  border-radius: 25px;
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
+}
+/* 项目具体内容 */
+#content #table_control{
+	width: 90%;
+	height: 3.5vh;
+	margin: 0 auto;
+	border-top-left-radius:15px;
+	border-top-right-radius:15px;
+	border-bottom-right-radius:0;
+	border-bottom-left-radius:0;
+	background-color:#d7eaff;
+	border:1px solid #9ec7e8;
+	position: relative;
+	display: flex;
+	justify-content: space-around;
+}
+#content #table_control i{
+	width: 26.3px;
+	height: 26.3px;
+	display: inline-block;
+	border: 1px solid #002DFF;
+	opacity: 0.5;
+
+	 
+}
+#content #content_text{
+	width: 90%;
+	height:600px;
+	margin: 0 auto;
+	border: 1px solid #9ec7e8;
+	border-top-left-radius:0;
+	border-top-right-radius:0;
+	border-bottom-right-radius:5px;
+	border-bottom-left-radius:5px;
+	background-color: rgba(255, 255, 255, 0.5);
+	overflow-x: auto;
+}
+	/* 滑动条样式 */
+#content #content_text::-webkit-scrollbar {
+  width: 7px;
+}
+#content #content_text::-webkit-scrollbar-thumb {
+  background-color: #C4E3F3;
+  border-radius: 25px;
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.3) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.3) 75%, transparent 75%, transparent);
+}
+#content #content_text p{
+	margin: 8px 8px;
+}
+#content #content_text h1,
+#content #content_text h2,
+#content #content_text h3,
+#content #content_text h4,
+#content #content_text h5,
+#content #content_text h6 {
+	margin: 8px 10px;
+
+}
+#content #table_control .meus div{
+	background-color: white;
+	position: absolute;
+	top: 3.6vh;
+	width: 100px;
+	text-align: center;
+	padding: 2px 5px;
+	background-color: rgba(220, 234, 241, 0.84);
+	display: none;
+	border-radius: 5px;
+}
+#content #table_control .meus div span{
+	display: block;
+	width: 80%;
+	margin: 3px auto;
+}
+#c_img_but{
+	width: 80%;
+	position: relative;
+	border-style: none;
+	background-color:#d7eaff;
+	margin: 5px auto;
+}
+#updata_img_content{
+	width: 100%;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+
+}
+/* 发布按钮样式 */
+#up_button{
+	width: 80%;
+	height: 5vh;
+	margin: 10px auto;
+	text-align: center;
+	margin-bottom :5vh;
+}
+#up_button #updata_btn{
+	width: 10%;
+	height: 5vh;
+	border-style: none;
+	background-color: rgba(0, 140, 0, 0.5);
+	color: white;
+	outline-color: rgba(0, 140, 0, 1);
+	margin-bottom: 7px;
+}

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>爱心捐衣</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="../jquery/jquery-3.4.1.js"></script>
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/swiper.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/animate.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/animate.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/show.css">
+    <link rel="stylesheet" href="css/header.css">
+</head>
+<body>
+<!--头部-->
+<div id="header">
+    <div class="logo">
+        <a href="../index.html"><img src="../image/logo.png"/></a>
+    </div>
+    <div class="header-a">
+        <div class="bs-example">
+            <ul class="nav nav-pills" role="tablist">
+                <li role="presentation" class="activ"><a href="../index.html">首页</a></li>&nbsp;
+                <li role="presentation" class="dropdown">
+                    <a id="drop4" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        项目分类
+                    </a>&nbsp;
+                    <ul id="menu1" class="dropdown-menu" aria-labelledby="drop4">
+                        <li><a href="../Public%20funds/show.html">公益资金</a></li>
+                        <li><a href="../clothes%20recycling/show.html">爱心捐衣</a></li>
+                        <li><a href="../project/environment/index.html">保护环境</a></li>
+                        <li><a href="../project/education/index.html">义务支教</a></li>
+                        <li><a href="../project/garbage/xiangmu.html">垃圾分类</a></li>
+                    </ul>
+                </li>
+                <li role="presentation" class="dropdown">
+                    <a id="drop5" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        加入我们
+                    </a>&nbsp;
+                    <ul id="menu2" class="dropdown-menu" aria-labelledby="drop5">
+                        <li><a id="company" onclick="alert('欢迎你的加入,具体请联系QQ:1649681210')">申请企业账户</a></li>
+                    </ul>
+                </li>
+                <li role="presentation" class="dropdown">
+                    <a id="drop6" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        登录
+                    </a>&nbsp;
+                    <ul id="menu3" class="dropdown-menu" aria-labelledby="drop6">
+                        <li id="login"><a>登录</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="phone">
+            <img class="phone1" src="../image/phone.png"/>
+            <span class="">400-260-0852</span>
+        </div>
+    </div>
+</div>
+<!--轮播-->
+<div id="demo" class="carousel slide" data-ride="carousel">
+    <!-- 指示符 -->
+    <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+    </ul>
+    <!-- 轮播图片 -->
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <a href="clothes_btn.html"><img src="../image/index2.jpg"></a>
+        </div>
+        <div class="carousel-item">
+            <a href="clothes_btn.html"><img src="../image/index1.jpg"></a>
+        </div>
+    </div>
+    <!-- 左右切换按钮 -->
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </a>
+</div>
+<!--衣服回收的内容填写-->
+<div class="clothing-form">
+    <br><br><br><br>
+    <div class="clothing-form_text"><h4>在线预约免费上门收衣</h4><p>环保为世界，公益为你</p></div>
+    <div class="clothing-form_input">
+        <div class="clothing-form_input_left">
+            <div class="clothing-form_input_name">姓&emsp;&emsp;名<span>*</span>&emsp;<input type="text" placeholder="请输入发件人姓名" id="name"><p>请输入正确的姓名</p></div>
+           <div class="clothing-form_input_phone"> 手机号码<span>*</span>&emsp;<input type="text" placeholder="请输入手机号码" id="phone"><p>请输入正确的手机号</p></div>
+            <div class="clothing-form_input_captch">验证码&emsp;<span>*</span>&emsp;<input type="text" placeholder="请输入收到的验证码" id="clothing-form_input_captch" class="captch">&emsp;&emsp;<button id="capbtn">获取验证码</button><p>请输入正确的验证码</p></div>
+            <div class="clothing-form_input_addr" >所在地区<span>*</span>&emsp;
+                <select name="select" id="sheng" >
+                     <option value="">请选择省份</option>
+                </select>
+                <select name="select" id="shi">
+                    <option value="">请选择市</option>
+                </select>
+                <select name="select" id="xian">
+                    <option value="">请选择县</option>
+                </select><p>请输入正确的地址</p></div>
+            <div class="clothing-form_input_paraddr" >详细地址<span>*</span>&emsp;<input type="text" placeholder="请输入您的详细地址" id="paraddr"><p>地址只能输入汉字</p></div>
+        </div>
+        <div class="clothing-form_input_right">
+            <div class="clothing-form_input_clothes">衣服重量<span>*</span>&emsp;<input type="text" placeholder="请输入衣服的重量(5kg以下暂不回收)" id="clothing"><p >衣服的重量不能为空</p></div>
+            <div class="clothing-form_input_time"> 预约时间<span>*</span>&emsp;<input type="text" placeholder="请输入上门回收的时间格式(xx年-xx月-xx日)" id="time"><p>请填入正确的时间格式</p></div>
+            <div class="clothing-form_input_remark">备&emsp;&emsp;注&emsp;&nbsp;<input type="text" id="remark" placeholder="请输入您的备注信息"></div>
+            <div><button id="clothing-form_input_btn">预约上门回收</button></div>
+        </div>
+    </div>
+</div>
+<!--回收过程-->
+<div class="clothing">
+    <div class="subscribe_index1">
+    <h4>一键预约 免费上门回收</h4>
+    <p>ONE CLICK AND WE WILL COME TO YOUR DOOR</p>
+</div>
+    <div class="clothing-subscribe">
+        <div class="subscribe_index2_index1"><img src="../image/online.png" alt=""><br><p>在线预约</p></div>
+        <div><span>➠</span></div>
+        <div class="subscribe_index2_index1"><img src="../image/drop-in.png" alt=""><br><p>上门回收</p></div>
+        <div><span>➠</span></div>
+        <div class="subscribe_index2_index1"><img src="../image/recovery.png" alt=""><br><p>回收完成</p></div>
+        <div><span>➠</span></div>
+        <div class="subscribe_index2_index1"><img src="../image/welfare.png" alt=""><br><p>获得福利</p></div>
+    </div></div>
+<!--回收展示-->
+    <div class="subscribe_index1">
+    <h4>旧衣回收现状</h4>
+    <p>环保为世界，公益为你</p>
+    </div>
+<div class="clothing_show">
+    <div class="clothing_show_index1"><img src="../image/waste.jpg" alt=""><br><h5>资源浪费</h5><br><p>我们每年产生2600万吨废旧纺织品 综合利用率不足10%</p></div>
+    <div class="clothing_show_index2"><img src="../image/protection.png" alt=""><br><h5>环保节能</h5><br><p>如果每年产生的废旧纺织品能全部得到循环利用 就可以节约4800万吨原油，相当于半个大庆油田 </p></div>
+    <div class="clothing_show_index3"><img src="../image/consume.jpg" alt=""><br><h5>供大于求</h5><br><p>我国贫困山区旧衣捐赠需求逐渐减弱 频次大幅降低</p></div>
+</div>
+<!--底部-->
+<div id="div1">
+    <p class="db">© 2013-2019 zrzy.com &emsp;&emsp;&emsp;&emsp;&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;版权所有 ICP证：京ICP备14000186号-10</p>
+    <p class="db"><img src="image/ZQQ5OB3U}~J@T6}9PV@YWCW.png"/>京公网安备11010102002019&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;建议使用1024*768以上分辨率浏览</p>
+    <p class="db">互联网违法和不良信息举报中心:0571-81683755&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;blxx@list.alibaba-inc.com</p>
+
+</div>
+</body>
+<!--城市的三级联动-->
+<script>
+    //原生的js
+    // var xhr = new XMLHttpRequest();
+    // xhr.open('get','city.php?paid=0&type=1',true);
+    // xhr.send();
+    // xhr.onreadystatechange=function(){
+    //     var text = xhr.responseText;
+    //     // console.log(text);
+    //     var arr = JSON.parse(text);
+    //     // console.log(arr);
+    //     for (var i = 0;i<arr.length;i++){
+    //         // console.log(arr[i].name);
+    //         document.getElementById('sheng').innerHTML+='<option value='+arr[i].id+'>'+arr[i].firstletter+arr[i].name+'</option>';
+    //     }
+    // }
+    //jQuery写法
+    $.ajax({
+        type:'get',
+        url:'city.php',
+        data:"paid=0&type=1",
+        success:function (resp) {
+            // console.log(resp);
+            var array = $.parseJSON(resp);
+            $.each(array,function (index,value) {
+                $('#sheng').append('<option value='+value.id+'>'+value.firstletter+value.name+'</option>')
+            })
+        }
+    })
+    //获取市------------------------------------------
+    //js原生的写法
+    // var shi = document.getElementById('sheng');
+    // shi.onchange=function(){
+    //     var xian = document.getElementById('xian');
+    //     var xian1 = document.getElementById('shi');
+    //     xian+xian1.childNodes.length;
+    // }
+    //jQuery写法
+    $('#sheng').change(function () {
+        $('#xian option:eq(0),#shi option:eq(0)').siblings().remove();
+        var parentid = $('#sheng').val();
+        $.ajax({
+            type: 'get',
+            url: 'city.php',
+            data: "paid="+parentid+"&type=2",
+            success:function (resp) {
+                // console.log(resp);
+                var array = $.parseJSON(resp);
+                $.each(array,function (index,value) {
+                    $('#shi').append('<option value='+value.id+'>'+value.firstletter+value.name+'</option>')
+                })
+            }
+        })
+    })
+    //或取县-------------------------------------------------
+    $('#shi').change(function () {
+        var parentid = $('#shi').val();
+        $('#xian option:eq(0)').siblings().remove();
+        $.ajax({
+            type: 'get',
+            url: 'city.php',
+            data: "paid="+parentid+"&type=3",
+            success:function (resp) {
+                // console.log(resp);
+                var array = $.parseJSON(resp);
+                $.each(array,function (index,value) {
+                    $('#xian').append('<option value='+value.id+'>'+value.firstletter+value.name+'</option>')
+                })
+            }
+        })
+    })
+</script>
+<!--信息验证预提交-->
+<script>
+    var caname;
+    var caphone;
+    var caparaddr;
+    var catime;
+    var caclothing;
+    //验证姓名
+    $("#name").blur(function () {
+        var name = $("#name").val();
+         caname = name == '' || name == undefined || name == null;
+        if (caname){
+            $(".clothing-form_input_name p").css("display","block")
+        }else {
+            $(".clothing-form_input_name p").css("display","none")
+        }
+    })
+    //验证手机号
+    $("#phone").blur(function () {
+        var phone = $("#phone").val();
+         caphone = /^1([38][0-9]|4[579]|5[0-3,5-9]|6[6]|7[0135678]|9[89])\d{8}$/.test(phone);
+        if (caphone){
+            $(".clothing-form_input_phone p").css("display","none")
+        }else {
+            $(".clothing-form_input_phone p").css("display","block")
+        }
+    })
+    //验证详细地址
+    $("#paraddr").blur(function () {
+        var paraddr = $("#paraddr").val();
+        caparaddr = /[\u4E00-\u9FA5]/.test(paraddr);
+        if (caparaddr){
+            $(".clothing-form_input_paraddr p").css("display","none")
+        }else {
+            $(".clothing-form_input_paraddr p").css("display","block")
+        }
+    })
+    //验证时间格式
+          $("#time").blur(function () {
+              var time = $("#time").val();
+              catime = /^(\d{4})(-)(\d{2})(-)(\d{2})$/.test(time);
+        if (catime){
+            $(".clothing-form_input_time p").css("display","none")
+        }else {
+            $(".clothing-form_input_time p").css("display","block")
+        }
+    })
+    //衣服重量格式验证
+    $("#clothing").blur(function () {
+        var clothing = $("#clothing").val();
+        caclothing = clothing == '' || clothing == undefined || clothing == null;
+        if (caclothing){
+            $(".clothing-form_input_clothes p").css("display","block")
+        }else {
+            $(".clothing-form_input_clothes p").css("display","none")
+        }
+    })
+// -------------------获取信息-----------------------
+    //验证码环节
+    var number;
+    var text;
+    $("#capbtn").click(function () {
+        text = $("#clothing-form_input_captch").val();
+        number = Math.floor(Math.random()*1000000);
+        var Mobile =$("#phone").val();
+        var name = "13213930868";
+        var pwd = "6d3b74bee8b7f2f1004a79172";
+        var context = "[自然之友]您的登录验证码为"+number;
+        var tid ="114923";
+        var sid = "201039";
+        $.ajax({
+            type:"post",
+            url:"send_font_message.php",
+            data:"Account="+name+"&Pwd="+pwd+"&Content="+context+"&Mobile="+Mobile+"&TemplateId="+tid+"&SignId="+sid,
+            success:function (res) {
+                console.log(res);
+            }
+        })
+    })
+    //提交与验证信息
+    $("#clothing-form_input_btn").click(function () {
+        // 当输入的信息不合法是时不能登录
+        if (!(caname)&&!(caclothing)&&catime&&caphone&&caparaddr){
+            if (number===text){
+            // console.log("1");
+            var name1 = $("#name").val();
+            var phone1 = $("#phone").val();
+            var paraddr1 = $("#paraddr").val();
+            var time1 = $("#time").val();
+            var clothing1 = $("#clothing").val();
+            var remark = $("#remark").val();
+            //获取输入框中的select的值
+            var  sheng = $("#sheng option:selected").text();
+            var shi = $("#shi option:selected").text();
+            var xian = $("#xian option:selected").text();
+            var addr = sheng+shi+xian;
+            var paraddr2 =addr+paraddr1;
+            $.ajax({
+                type:"post",
+                url:"message.php",
+                data:"name="+name1+"&phone="+phone1+"&paraddr="+paraddr2+"&time="+time1+"&clothing="+clothing1,
+                success:function (res,sta,rr) {
+                    console.log(res);
+                    console.log(sta);
+                    console.log(rr);
+                }
+            })
+            }else {
+                alert("请输入正确的验证码")
+            }
+        }else {
+            alert("请完善信息后重新提交")
+        }
+
+    })
+
+</script>
+<!--验证码的发送-->
+<script>
+    // var number = Math.floor(Math.random()*1000000);
+    // console.log(number);
+    $('#menu3 #login').click(function(event) {
+        if (sessionStorage.getItem('u_id') != null | sessionStorage.getItem('com_id') != null |sessionStorage.getItem('admin_id') != null ) {
+            alert('已经登录,无需在登录!');
+        }else{
+            window.location.assign('../login and res/login.html');
+        }
+    });
+</script>
+</html>

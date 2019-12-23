@@ -1,0 +1,113 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+body{
+	background-image: url(../../homeImg/3.JPG);/*背景图*/
+	background-size: cover;
+	background-repeat: no-repeat;   /*不重复*/
+   	overflow: hidden;
+}
+.register{
+	position: relative;
+	width: 800px;
+	margin:  0 auto;
+}
+.regist{
+	position: absolute;
+	left: 290px;
+	top: 100px;
+	width: 200px;
+	height: 50px;
+	background-color: #8ecdde;
+	border-radius: 50px;
+	text-align: center;
+	font-size: 30px;	
+	color: royalblue;			
+}
+.log{
+	position: absolute;
+	top: 150px;
+	left: 290px;
+	font-size:20px ;
+}
+.account{
+	position: absolute;
+	top: 300px;
+	left: 150px;
+	width: 500px;
+	height: 10px;
+	font-size: 30px;
+	color: royalblue;
+}
+.account input{
+	width: 400px;
+	height: 50px;
+	background-color: #8ecdde;
+	border: none;
+	outline: none;
+	border-radius: 50px;
+}
+.account input:hover{
+	opacity: 0.7;
+}
+.pass{
+	position: absolute;
+	top: 420px;
+	left: 150px;
+	width: 500px;
+	height: 100px;
+	font-size: 30px;
+	color: royalblue;
+}
+.pass input{
+	width: 400px;
+	height: 50px;
+	background-color:#8ecdde;
+	border: none;
+	outline: none;
+	border-radius: 50px;
+}
+.pass input:hover{
+	opacity: 0.7;
+}
+.regis{
+	position: absolute;
+	top: 550px;
+	left: 260px;
+	width: 300px;
+	height: 50px;
+	background-color: #8ecdde;
+	border-radius: 50px;	
+}
+#button{
+	margin-top: 3px;
+	margin-left:45px;
+	width: 200px;
+	height: 40px;
+	border: none;
+	outline: none;
+	color: royalblue;
+	font-size: 30px;
+	background-color: #8ecdde;
+}
+.regis button:hover{
+	opacity: 0.7;
+}
+.warning{
+	position: absolute;
+	color: red;
+	top: 310px;
+	left: 630px;
+	width: 180px;
+	height: 30px;
+}
+.warning-two{
+	position: absolute;
+	color: red;
+	top: 430px;
+	left: 630px;
+	width: 180px;
+	height: 30px;
+}
+

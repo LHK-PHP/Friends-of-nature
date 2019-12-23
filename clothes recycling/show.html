@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>爱心捐衣</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../jquery/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-gl/dist/echarts-gl.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-stat/dist/ecStat.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/extension/dataTool.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/map/js/china.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/map/js/world.js"></script>
+    <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=u70A5pnNrRtRT1XAgwM5jL2YIVj1Gv97"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/extension/bmap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/swiper.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/animate.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/animate.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/show1.css">
+</head>
+<body>
+<!--头部-->
+<div id="header">
+    <div class="logo">
+        <a href="../index.html"><img src="../image/logo.png"/></a>
+    </div>
+    <div class="header-a">
+        <div class="bs-example">
+            <ul class="nav nav-pills" role="tablist">
+                <li role="presentation" class="activ"><a href="../index.html">首页</a></li>&nbsp;
+                <li role="presentation" class="dropdown">
+                    <a id="drop4" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        项目分类
+                        
+                    </a>&nbsp;
+                    <ul id="menu1" class="dropdown-menu" aria-labelledby="drop4">
+                        <li><a href="../Public%20funds/show.html">公益资金</a></li>
+                        <li><a href="../clothes%20recycling/show.html">爱心捐衣</a></li>
+                        <li><a href="../project/environment/index.html">保护环境</a></li>
+                        <li><a href="../project/education/index.html">义务支教</a></li>
+                        <li><a href="../project/garbage/xiangmu.html">垃圾分类</a></li>
+                    </ul>
+                </li>
+                <li role="presentation" class="dropdown">
+                    <a id="drop5" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        加入我们
+                        
+                    </a>&nbsp;
+                    <ul id="menu2" class="dropdown-menu" aria-labelledby="drop5">
+                        <li><a id="company" onclick="alert('欢迎你的加入,具体请联系QQ:1649681210')">申请企业账户</a></li>
+                    </ul>
+                </li>
+                <li role="presentation" class="dropdown">
+                    <a id="drop6" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        登录
+                        
+                    </a>&nbsp;
+                    <ul id="menu3" class="dropdown-menu" aria-labelledby="drop6">
+                        <li id="login"><a>登录</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="phone">
+            <img class="phone1" src="../image/phone.png"/>
+            <span class="">400-260-0852</span>
+        </div>
+    </div>
+</div>
+<!--轮播图-->
+<div id="demo" class="carousel slide" data-ride="carousel">
+    <!-- 指示符 -->
+    <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+    </ul>
+    <!-- 轮播图片 -->
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <a href="../project/Clothing%20recycling/index.html"><img src="../image/index2.jpg"></a>
+        </div>
+        <div class="carousel-item">
+            <a href="clothes_btn.html"><img src="../image/index1.jpg"></a>
+        </div>
+    </div>
+    <!-- 左右切换按钮 -->
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </a>
+</div>
+<!--中间回收文字按钮-->
+<div class="text">
+<h3>国内领先旧衣回收处理平台</h3>
+    <p>环保为世界，公益为你</p>
+    <span class="text">·数据统计·</span>
+</div>
+<!--数据统计的界面-->
+<div class="show_number">
+    <div class="num1"><span>5640868</span>Kg<p>旧衣回收数量统计</p></div>
+    <div class="num2"><span>893103</span>人<p>旧衣回收参与人数统计</p></div>
+</div>
+<!--现状对比阶段-->
+<div class="modal1">
+<!--    左面点击触发事件-->
+    <div class="current">
+        <div class="current_part1">当前现状</div>
+        <div class="current_part2">解决方案</div>
+    </div>
+<!--    随着左边而改变的内容-->
+    <div class="problem">
+        <div class="problem_index1">
+            <div class="problem_part1">
+            <div class="current_part1_index1">
+                <p>旧衣资源浪费多</p>
+                <span>有效利用率不到10%</span>
+            </div>
+            <div class="current_part1_index2">
+                <p>供远大于求</p>
+                <span>单纯捐赠无法消化</span>
+            </div>
+            <div class="current_part1_index3">
+                <p>旧衣处理难度大</p>
+                <span>捐赠衣物要求严格</span>
+            </div>
+        </div>
+<!--            页面展示的第一张-->
+           <div class="problem_index1_page1">
+               <div class="current_part1_part1">
+                   <div class="current_part1_image">
+                       <img src="../image/waste.jpg" alt="">
+                   </div>
+                   <div class="current_part1_text">
+                       <h4 class="text_h4">年产5000万吨旧衣服，九成以上...</h4>
+                       <span class="text_span">
+                    据不完全统计，我国每年纤维加工总量约5000万吨，产生超过2000万吨废旧纺织品，而回收利用率不足10%，每年大量的废旧衣物被焚烧或填埋，污染环境，造成资源浪费。
+                </span>
+                   </div>
+               </div>
+           </div>
+        </div>
+        <div class="problem_index2">
+            <div class="problem_part1">
+                <div class="current_part2_index1">
+                    <p>再生加工处理</p>
+                    <span>50%以上的品种可以加工利用</span>
+                </div>
+                <div class="current_part2_index2">
+                    <p>公益捐赠贫困地区</p>
+                    <span>缓解贫困地区的生活现状</span>
+                </div>
+                <div class="current_part2_index3">
+                    <p>国际支援</p>
+                    <span>将温暖普遍更广，让世界更加团结</span>
+                </div>
+            </div>
+            <!--            页面展示的第二张-->
+            <div class="problem_index2_page2">
+                <div class="current_part2_part2">
+                    <div class="current_part2_image">
+                        <img src="../image/regenerate.jpg" alt="">
+                    </div>
+                    <div class="current_part2_text">
+                        <h4 class="text2_h4">年产5000万吨旧衣服，九成以上...</h4>
+                        <span class="text2_span">
+                    据不完全统计，我国每年纤维加工总量约5000万吨，产生超过2000万吨废旧纺织品，而回收利用率不足10%，每年大量的废旧衣物被焚烧或填埋，污染环境，造成资源浪费。
+                </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+<!--回收的福利宣传国内领先的倡导环保公益处理闲置的平台-->
+<div id="welfare">
+    <div class="welfare_index1">
+        <h4>国内领先的倡导环保公益处理闲置的平台</h4>
+        <p>LEADING ENVIRONMENTAL PROTECTION & PUBLIC WELFARE</p>
+    </div>
+    <div class="welfare_index2">
+        <div class="welfare_index2_part1"><div class="welfare_index2_part1_div1"><h3><a href="clothes_btn.html">旧衣回收☛</a></h3><span>Old book</span><img src="../image/old-clothes.png" alt=""></div></div>
+        <div class="welfare_index2_part2"><div class="welfare_index2_part1_div2"><h3><a href="clothes_btn.html">旧物回收☛</a></h3><span>Old goods</span><img
+                src="../image/book-bg.png" alt=""></div></div>
+        <div class="welfare_index2_part3"><div class="welfare_index2_part1_div3"><h3>敬请期待☛</h3><span>Coming soon</span><img
+                src="../image/coming-bg.png" alt=""></div></div>
+    </div>
+</div>
+<!--预约上门服务-->
+<div class="subscribe">
+    <div class="subscribe_index1">
+        <h4>一键预约 免费上门回收</h4>
+        <p>ONE CLICK AND WE WILL COME TO YOUR DOOR</p>
+    </div>
+    <div class="subscribe_index2">
+        <div class="subscribe_index2_index1"><img src="../image/online.png" alt=""><br><p>在线预约</p></div>
+        <div><span>➠</span></div>
+        <div class="subscribe_index2_index1"><img src="../image/drop-in.png" alt=""><br><p>上门回收</p></div>
+        <div><span>➠</span></div>
+        <div class="subscribe_index2_index1"><img src="../image/recovery.png" alt=""><br><p>回收完成</p></div>
+        <div><span>➠</span></div>
+        <div class="subscribe_index2_index1"><img src="../image/welfare.png" alt=""><br><p>获得福利</p></div>
+    </div>
+</div>
+<!--地图显示-->
+<div class="map">
+    <div class="map_text">
+        <h4>全国300个城市免费上门回收</h4>
+        <p>FREE COLLECTION ACROSS 300 CITIES IN CHINA</p>
+    </div>
+    <div id="container"></div>
+</div>
+<!--业务展示-->
+<div class="Show_business">
+<div class="Show_business_index1"><h3>回收业务</h3><p>THE RECYCLING BUSINESS OF THE FEI MA YI</p></div>
+    <div class="Show_business_index2"><img src="../image/business.jpg" alt=""></div>
+    <div class="Show_business_text">
+        <h3>旧衣新去处</h3><p>环保+公益，低碳环保新风尚</p><br>
+        <p>据不完全统计，国内每年产生的超过5000万吨的旧衣服中，真正被有效利用的不到10%，随着人们生活水平的提高，旧衣服造成的资源量费正在进一步增加中。</p>​
+        <button class="Show_business_btn">&nbsp;&nbsp;&nbsp;&nbsp;<a href="clothes_btn.html">点击预约▶</a></button>
+    </div>
+    <div class="Show_business_index3"><img src="../image/statute.jpg" alt=""></div>
+    <div class="Show_business_text2">
+        <h3>旧衣新去处</h3><p>环保+公益，低碳环保新风尚</p><br>
+        <p>据不完全统计，国内每年产生的超过5000万吨的旧衣服中，真正被有效利用的不到10%，随着人们生活水平的提高，旧衣服造成的资源量费正在进一步增加中。</p>​
+        <button class="Show_business_btn2">&nbsp;&nbsp;&nbsp;&nbsp;<a href="clothes_btn.html">点击预约▶</a></button>
+    </div>
+</div>
+<!--底部-->
+<div id="div1">
+    <p class="db">© 2013-2019 zrzy.com &emsp;&emsp;&emsp;&emsp;&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;版权所有 ICP证：京ICP备14000186号-10</p>
+    <p class="db"><img src="../image/ZQQ5OB3U}~J@T6}9PV@YWCW.png"/>京公网安备11010102002019&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;建议使用1024*768以上分辨率浏览</p>
+    <p class="db">互联网违法和不良信息举报中心:0571-81683755&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;blxx@list.alibaba-inc.com</p>
+
+</div>
+</body>
+<script>
+    //头部
+    $('#menu3 #login').click(function(event) {
+        if (sessionStorage.getItem('u_id') != null | sessionStorage.getItem('com_id') != null |sessionStorage.getItem('admin_id') != null ) {
+            alert('已经登录,无需在登录!');
+        }else{
+            window.location.assign('../login and res/login.html');
+        }
+    });
+    //数字自己加
+// setInterval(function () {
+//     var num1 = $(".num1 span").text();
+//     var numm = eval(num1+=1);
+//     console.log(numm);
+//     $(".num1 span").text(Number(numm));
+// },500)
+    // 现状对比阶段需要的切换效果
+    $(".current_part1").click(function () {
+        $(".current_part1").css({
+            "backgroundColor": "#55E1EA",
+            "width": "220px",
+            "height": "220px",
+            "border-radius": "3%",
+            "text-align": "center",
+            "line-height": "220px",
+            "font-size": "30px"
+        });
+        $(".current_part2").css({
+            "backgroundColor": "#DDDDDD",
+            "width": "220px",
+            "height": "100px",
+            "border-radius": "3%",
+            "text-align": "center",
+            "line-height": "100px",
+            "font-size": "30px"
+        })
+    })
+    $(".current_part2").click(function () {
+        $(".current_part2").css({
+            "backgroundColor": "#55E1EA",
+            "width": "220px",
+            "height": "220px",
+            "border-radius": "3%",
+            "text-align": "center",
+            "line-height": "220px",
+            "font-size": "30px"
+        });
+        $(".current_part1").css({
+            "backgroundColor": "#DDDDDD",
+            "width": "220px",
+            "height": "100px",
+            "border-radius": "3%",
+            "text-align": "center",
+            "line-height": "100px",
+            "font-size": "30px"
+        })
+    })
+    // 点击当前状况事件触发选中的页面
+    $(".current_part1_index1").click(function () {
+        $(".current_part1_index1").css({"border": "1px solid #20E3CB", "backgroundColor": "#E5FFFC"})
+        $(".current_part1_index2").css({"border": "0px solid #20E3CB", "backgroundColor": "#f8f8f8"})
+        $(".current_part1_index3").css({"border": "0px solid #20E3CB", "backgroundColor": "#f8f8f8"})
+        $(".current_part1_image>img").prop("src", "../image/waste.jpg");
+        $(".text_h4").text("年产5000万吨旧衣服，九成以上...")
+        $(".text_span").text("据不完全统计，我国每年纤维加工总量约5000万吨，产生超过2000万吨废旧纺织品，而回收利用率不足10%，每年大量的废旧衣物被焚烧或填埋，污染环境，造成资源浪费。")
+        console.log("hello world");
+    })
+    $(".current_part1_index2").click(function () {
+        $(".current_part1_index1").css({"border": "0px solid #20E3CB", "backgroundColor": "#f8f8f8"})
+        $(".current_part1_index2").css({"border": "1px solid #20E3CB", "backgroundColor": "#E5FFFC"})
+        $(".current_part1_index3").css({"border": "0px solid #20E3CB", "backgroundColor": "#f8f8f8"})
+        $(".current_part1_image>img").prop("src", "../image/consume.jpg");
+        $(".text_h4").text("贫困地区捐赠需求多样化，捐赠不容易")
+        $(".text_span").text("近5年的数据统计发现，目前需要大批量衣物捐助的地方逐渐减少，简单的旧衣服捐赠已经无法满足贫困地区的需求。我们正在通过多个维度寻找平衡点，以精准捐赠解决更多的问题。")
+        console.log("页面2");
+    })
+    $(".current_part1_index3").click(function () {
+        $(".current_part1_index1").css({"border": "0px solid #20E3CB", "backgroundColor": "#f8f8f8"})
+        $(".current_part1_index2").css({"border": "0px solid #20E3CB", "backgroundColor": "#f8f8f8"})
+        $(".current_part1_index3").css({"border": "1px solid #20E3CB", "backgroundColor": "#E5FFFC"})
+        $(".current_part1_image>img").prop("src", "../image/statute.jpg");
+        $(".text_h4").text("衣物捐赠要求严格，多数衣服难处理")
+        $(".text_span").text("根据有关规定，考虑到卫生与安全问题，内衣裤或者T恤等直接接触皮肤类的旧衣物不能进行捐赠。而此类衣物生产量超过60%，造成纤维纺织品的大量废弃，单纯的捐助旧衣物无法解决困局。")
+        console.log("页面3");
+    })
+    //// 点击解决方案事件触发选中的页面
+    $(".current_part2_index1").click(function () {
+        $(".current_part2_index1").css({"border": "1px solid #20E3CB", "backgroundColor": "#E5FFFC"})
+        $(".current_part2_index2").css({"border": "0px solid #20E3CB", "backgroundColor": "#f8f8f8"})
+        $(".current_part2_index3").css({"border": "0px solid #20E3CB", "backgroundColor": "#f8f8f8"})
+        $(".current_part2_image>img").prop("src", "../image/regenerate.jpg");
+        $(".text2_h4").text("大部分纺织品都可以被再生利用")
+        $(".text2_span").text("一些脏、破、烂等不能被捐赠或者无法满足出口需求的衣物，我们会进行纤维化处理或者开花成再生棉，用于制作农业大棚被、毛绒玩具填充物、地毯原材料以及一些工业隔音棉材料等，资源进行充分循环利用")
+        console.log("hello world");
+    })
+    $(".current_part2_index2").click(function () {
+        $(".current_part2_index1").css({"border": "0px solid #20E3CB", "backgroundColor": "#f8f8f8"})
+        $(".current_part2_index2").css({"border": "1px solid #20E3CB", "backgroundColor": "#E5FFFC"})
+        $(".current_part2_index3").css({"border": "0px solid #20E3CB", "backgroundColor": "#f8f8f8"})
+        $(".current_part2_image>img").prop("src", "../image/poor.jpg");
+        $(".text2_h4").text("支援帮助贫困山区群众")
+        $(".text2_span").text("我们从2014年起就就参与了各类公益活动：向偏远地区捐赠衣物，捐赠覆盖地区超过500个，部分地区已经获得多次捐赠，超过100000人得到温暖。")
+        console.log("页面2");
+    })
+    $(".current_part2_index3").click(function () {
+        $(".current_part2_index1").css({"border": "0px solid #20E3CB", "backgroundColor": "#f8f8f8"})
+        $(".current_part2_index2").css({"border": "0px solid #20E3CB", "backgroundColor": "#f8f8f8"})
+        $(".current_part2_index3").css({"border": "1px solid #20E3CB", "backgroundColor": "#E5FFFC"})
+        $(".current_part2_image>img").prop("src", "../image/support.jpg");
+        $(".text2_h4").text("帮扶贫困国家难民问题")
+        $(".text2_span").text("我们会将较新的夏衣，整理消毒后，出口至非洲、中东等热带地区一些非政府组织，以救济难民。所得收益用于平衡上门收衣服务的物流、平台运营和公益项目的支出。 ")
+        console.log("页面3");
+    })
+    //点击两个切换界面
+    $(".current_part1").click(function () {
+        $(".problem_index1").css("display", "block");
+        $(".problem_index2").css("display", "none");
+    })
+    $(".current_part2").click(function () {
+        $(".problem_index1").css("display", "none");
+        $(".problem_index2").css("display", "block");
+    })
+</script>
+<!--地图文件调用-->
+<script type="text/javascript">
+    var dom = document.getElementById("container");
+    var myChart = echarts.init(dom);
+    var app = {};
+    option = null;
+    var data = [
+        {name: '海门', value: 9},
+        {name: '鄂尔多斯', value: 12},
+        {name: '招远', value: 12},
+        {name: '舟山', value: 12},
+        {name: '齐齐哈尔', value: 14},
+        {name: '盐城', value: 15},
+        {name: '赤峰', value: 16},
+        {name: '青岛', value: 18},
+        {name: '乳山', value: 18},
+        {name: '金昌', value: 19},
+        {name: '泉州', value: 21},
+        {name: '莱西', value: 21},
+        {name: '日照', value: 21},
+        {name: '胶南', value: 22},
+        {name: '南通', value: 23},
+        {name: '拉萨', value: 24},
+        {name: '云浮', value: 24},
+        {name: '梅州', value: 25},
+        {name: '文登', value: 25},
+        {name: '上海', value: 25},
+        {name: '攀枝花', value: 25},
+        {name: '威海', value: 25},
+        {name: '承德', value: 25},
+        {name: '厦门', value: 26},
+        {name: '汕尾', value: 26},
+        {name: '潮州', value: 26},
+        {name: '丹东', value: 27},
+        {name: '太仓', value: 27},
+        {name: '曲靖', value: 27},
+        {name: '烟台', value: 28},
+        {name: '福州', value: 29},
+        {name: '瓦房店', value: 30},
+        {name: '即墨', value: 30},
+        {name: '抚顺', value: 31},
+        {name: '玉溪', value: 31},
+        {name: '张家口', value: 31},
+        {name: '阳泉', value: 31},
+        {name: '莱州', value: 32},
+        {name: '湖州', value: 32},
+        {name: '汕头', value: 32},
+        {name: '昆山', value: 33},
+        {name: '宁波', value: 33},
+        {name: '湛江', value: 33},
+        {name: '揭阳', value: 34},
+        {name: '荣成', value: 34},
+        {name: '连云港', value: 35},
+        {name: '葫芦岛', value: 35},
+        {name: '常熟', value: 36},
+        {name: '东莞', value: 36},
+        {name: '河源', value: 36},
+        {name: '淮安', value: 36},
+        {name: '泰州', value: 36},
+        {name: '南宁', value: 37},
+        {name: '营口', value: 37},
+        {name: '惠州', value: 37},
+        {name: '江阴', value: 37},
+        {name: '蓬莱', value: 37},
+        {name: '韶关', value: 38},
+        {name: '嘉峪关', value: 38},
+        {name: '广州', value: 38},
+        {name: '延安', value: 38},
+        {name: '太原', value: 39},
+        {name: '清远', value: 39},
+        {name: '中山', value: 39},
+        {name: '昆明', value: 39},
+        {name: '寿光', value: 40},
+        {name: '盘锦', value: 40},
+        {name: '长治', value: 41},
+        {name: '深圳', value: 41},
+        {name: '珠海', value: 42},
+        {name: '宿迁', value: 43},
+        {name: '咸阳', value: 43},
+        {name: '铜川', value: 44},
+        {name: '平度', value: 44},
+        {name: '佛山', value: 44},
+        {name: '海口', value: 44},
+        {name: '江门', value: 45},
+        {name: '章丘', value: 45},
+        {name: '肇庆', value: 46},
+        {name: '大连', value: 47},
+        {name: '临汾', value: 47},
+        {name: '吴江', value: 47},
+        {name: '石嘴山', value: 49},
+        {name: '沈阳', value: 50},
+        {name: '苏州', value: 50},
+        {name: '茂名', value: 50},
+        {name: '嘉兴', value: 51},
+        {name: '长春', value: 51},
+        {name: '胶州', value: 52},
+        {name: '银川', value: 52},
+        {name: '张家港', value: 52},
+        {name: '三门峡', value: 53},
+        {name: '锦州', value: 54},
+        {name: '南昌', value: 54},
+        {name: '柳州', value: 54},
+        {name: '三亚', value: 54},
+        {name: '自贡', value: 56},
+        {name: '吉林', value: 56},
+        {name: '阳江', value: 57},
+        {name: '泸州', value: 57},
+        {name: '西宁', value: 57},
+        {name: '宜宾', value: 58},
+        {name: '呼和浩特', value: 58},
+        {name: '成都', value: 58},
+        {name: '大同', value: 58},
+        {name: '镇江', value: 59},
+        {name: '桂林', value: 59},
+        {name: '张家界', value: 59},
+        {name: '宜兴', value: 59},
+        {name: '北海', value: 60},
+        {name: '西安', value: 61},
+        {name: '金坛', value: 62},
+        {name: '东营', value: 62},
+        {name: '牡丹江', value: 63},
+        {name: '遵义', value: 63},
+        {name: '绍兴', value: 63},
+        {name: '扬州', value: 64},
+        {name: '常州', value: 64},
+        {name: '潍坊', value: 65},
+        {name: '重庆', value: 66},
+        {name: '台州', value: 67},
+        {name: '南京', value: 67},
+        {name: '滨州', value: 70},
+        {name: '贵阳', value: 71},
+        {name: '无锡', value: 71},
+        {name: '本溪', value: 71},
+        {name: '克拉玛依', value: 72},
+        {name: '渭南', value: 72},
+        {name: '马鞍山', value: 72},
+        {name: '宝鸡', value: 72},
+        {name: '焦作', value: 75},
+        {name: '句容', value: 75},
+        {name: '北京', value: 79},
+        {name: '徐州', value: 79},
+        {name: '衡水', value: 80},
+        {name: '包头', value: 80},
+        {name: '绵阳', value: 80},
+        {name: '乌鲁木齐', value: 84},
+        {name: '枣庄', value: 84},
+        {name: '杭州', value: 84},
+        {name: '淄博', value: 85},
+        {name: '鞍山', value: 86},
+        {name: '溧阳', value: 86},
+        {name: '库尔勒', value: 86},
+        {name: '安阳', value: 90},
+        {name: '开封', value: 90},
+        {name: '济南', value: 92},
+        {name: '德阳', value: 93},
+        {name: '温州', value: 95},
+        {name: '九江', value: 96},
+        {name: '邯郸', value: 98},
+        {name: '临安', value: 99},
+        {name: '兰州', value: 99},
+        {name: '沧州', value: 100},
+        {name: '临沂', value: 103},
+        {name: '南充', value: 104},
+        {name: '天津', value: 105},
+        {name: '富阳', value: 106},
+        {name: '泰安', value: 112},
+        {name: '诸暨', value: 112},
+        {name: '郑州', value: 113},
+        {name: '哈尔滨', value: 114},
+        {name: '聊城', value: 116},
+        {name: '芜湖', value: 117},
+        {name: '唐山', value: 119},
+        {name: '平顶山', value: 119},
+        {name: '邢台', value: 119},
+        {name: '德州', value: 120},
+        {name: '济宁', value: 120},
+        {name: '荆州', value: 127},
+        {name: '宜昌', value: 130},
+        {name: '义乌', value: 132},
+        {name: '丽水', value: 133},
+        {name: '洛阳', value: 134},
+        {name: '秦皇岛', value: 136},
+        {name: '株洲', value: 143},
+        {name: '石家庄', value: 147},
+        {name: '莱芜', value: 148},
+        {name: '常德', value: 152},
+        {name: '保定', value: 153},
+        {name: '湘潭', value: 154},
+        {name: '金华', value: 157},
+        {name: '岳阳', value: 169},
+        {name: '长沙', value: 175},
+        {name: '衢州', value: 177},
+        {name: '廊坊', value: 193},
+        {name: '菏泽', value: 194},
+        {name: '合肥', value: 229},
+        {name: '武汉', value: 273},
+        {name: '大庆', value: 279}
+    ];
+
+    var geoCoordMap = {
+        '海门':[121.15,31.89],
+        '鄂尔多斯':[109.781327,39.608266],
+        '招远':[120.38,37.35],
+        '舟山':[122.207216,29.985295],
+        '齐齐哈尔':[123.97,47.33],
+        '盐城':[120.13,33.38],
+        '赤峰':[118.87,42.28],
+        '青岛':[120.33,36.07],
+        '乳山':[121.52,36.89],
+        '金昌':[102.188043,38.520089],
+        '泉州':[118.58,24.93],
+        '莱西':[120.53,36.86],
+        '日照':[119.46,35.42],
+        '胶南':[119.97,35.88],
+        '南通':[121.05,32.08],
+        '拉萨':[91.11,29.97],
+        '云浮':[112.02,22.93],
+        '梅州':[116.1,24.55],
+        '文登':[122.05,37.2],
+        '上海':[121.48,31.22],
+        '攀枝花':[101.718637,26.582347],
+        '威海':[122.1,37.5],
+        '承德':[117.93,40.97],
+        '厦门':[118.1,24.46],
+        '汕尾':[115.375279,22.786211],
+        '潮州':[116.63,23.68],
+        '丹东':[124.37,40.13],
+        '太仓':[121.1,31.45],
+        '曲靖':[103.79,25.51],
+        '烟台':[121.39,37.52],
+        '福州':[119.3,26.08],
+        '瓦房店':[121.979603,39.627114],
+        '即墨':[120.45,36.38],
+        '抚顺':[123.97,41.97],
+        '玉溪':[102.52,24.35],
+        '张家口':[114.87,40.82],
+        '阳泉':[113.57,37.85],
+        '莱州':[119.942327,37.177017],
+        '湖州':[120.1,30.86],
+        '汕头':[116.69,23.39],
+        '昆山':[120.95,31.39],
+        '宁波':[121.56,29.86],
+        '湛江':[110.359377,21.270708],
+        '揭阳':[116.35,23.55],
+        '荣成':[122.41,37.16],
+        '连云港':[119.16,34.59],
+        '葫芦岛':[120.836932,40.711052],
+        '常熟':[120.74,31.64],
+        '东莞':[113.75,23.04],
+        '河源':[114.68,23.73],
+        '淮安':[119.15,33.5],
+        '泰州':[119.9,32.49],
+        '南宁':[108.33,22.84],
+        '营口':[122.18,40.65],
+        '惠州':[114.4,23.09],
+        '江阴':[120.26,31.91],
+        '蓬莱':[120.75,37.8],
+        '韶关':[113.62,24.84],
+        '嘉峪关':[98.289152,39.77313],
+        '广州':[113.23,23.16],
+        '延安':[109.47,36.6],
+        '太原':[112.53,37.87],
+        '清远':[113.01,23.7],
+        '中山':[113.38,22.52],
+        '昆明':[102.73,25.04],
+        '寿光':[118.73,36.86],
+        '盘锦':[122.070714,41.119997],
+        '长治':[113.08,36.18],
+        '深圳':[114.07,22.62],
+        '珠海':[113.52,22.3],
+        '宿迁':[118.3,33.96],
+        '咸阳':[108.72,34.36],
+        '铜川':[109.11,35.09],
+        '平度':[119.97,36.77],
+        '佛山':[113.11,23.05],
+        '海口':[110.35,20.02],
+        '江门':[113.06,22.61],
+        '章丘':[117.53,36.72],
+        '肇庆':[112.44,23.05],
+        '大连':[121.62,38.92],
+        '临汾':[111.5,36.08],
+        '吴江':[120.63,31.16],
+        '石嘴山':[106.39,39.04],
+        '沈阳':[123.38,41.8],
+        '苏州':[120.62,31.32],
+        '茂名':[110.88,21.68],
+        '嘉兴':[120.76,30.77],
+        '长春':[125.35,43.88],
+        '胶州':[120.03336,36.264622],
+        '银川':[106.27,38.47],
+        '张家港':[120.555821,31.875428],
+        '三门峡':[111.19,34.76],
+        '锦州':[121.15,41.13],
+        '南昌':[115.89,28.68],
+        '柳州':[109.4,24.33],
+        '三亚':[109.511909,18.252847],
+        '自贡':[104.778442,29.33903],
+        '吉林':[126.57,43.87],
+        '阳江':[111.95,21.85],
+        '泸州':[105.39,28.91],
+        '西宁':[101.74,36.56],
+        '宜宾':[104.56,29.77],
+        '呼和浩特':[111.65,40.82],
+        '成都':[104.06,30.67],
+        '大同':[113.3,40.12],
+        '镇江':[119.44,32.2],
+        '桂林':[110.28,25.29],
+        '张家界':[110.479191,29.117096],
+        '宜兴':[119.82,31.36],
+        '北海':[109.12,21.49],
+        '西安':[108.95,34.27],
+        '金坛':[119.56,31.74],
+        '东营':[118.49,37.46],
+        '牡丹江':[129.58,44.6],
+        '遵义':[106.9,27.7],
+        '绍兴':[120.58,30.01],
+        '扬州':[119.42,32.39],
+        '常州':[119.95,31.79],
+        '潍坊':[119.1,36.62],
+        '重庆':[106.54,29.59],
+        '台州':[121.420757,28.656386],
+        '南京':[118.78,32.04],
+        '滨州':[118.03,37.36],
+        '贵阳':[106.71,26.57],
+        '无锡':[120.29,31.59],
+        '本溪':[123.73,41.3],
+        '克拉玛依':[84.77,45.59],
+        '渭南':[109.5,34.52],
+        '马鞍山':[118.48,31.56],
+        '宝鸡':[107.15,34.38],
+        '焦作':[113.21,35.24],
+        '句容':[119.16,31.95],
+        '北京':[116.46,39.92],
+        '徐州':[117.2,34.26],
+        '衡水':[115.72,37.72],
+        '包头':[110,40.58],
+        '绵阳':[104.73,31.48],
+        '乌鲁木齐':[87.68,43.77],
+        '枣庄':[117.57,34.86],
+        '杭州':[120.19,30.26],
+        '淄博':[118.05,36.78],
+        '鞍山':[122.85,41.12],
+        '溧阳':[119.48,31.43],
+        '库尔勒':[86.06,41.68],
+        '安阳':[114.35,36.1],
+        '开封':[114.35,34.79],
+        '济南':[117,36.65],
+        '德阳':[104.37,31.13],
+        '温州':[120.65,28.01],
+        '九江':[115.97,29.71],
+        '邯郸':[114.47,36.6],
+        '临安':[119.72,30.23],
+        '兰州':[103.73,36.03],
+        '沧州':[116.83,38.33],
+        '临沂':[118.35,35.05],
+        '南充':[106.110698,30.837793],
+        '天津':[117.2,39.13],
+        '富阳':[119.95,30.07],
+        '泰安':[117.13,36.18],
+        '诸暨':[120.23,29.71],
+        '郑州':[113.65,34.76],
+        '哈尔滨':[126.63,45.75],
+        '聊城':[115.97,36.45],
+        '芜湖':[118.38,31.33],
+        '唐山':[118.02,39.63],
+        '平顶山':[113.29,33.75],
+        '邢台':[114.48,37.05],
+        '德州':[116.29,37.45],
+        '济宁':[116.59,35.38],
+        '荆州':[112.239741,30.335165],
+        '宜昌':[111.3,30.7],
+        '义乌':[120.06,29.32],
+        '丽水':[119.92,28.45],
+        '洛阳':[112.44,34.7],
+        '秦皇岛':[119.57,39.95],
+        '株洲':[113.16,27.83],
+        '石家庄':[114.48,38.03],
+        '莱芜':[117.67,36.19],
+        '常德':[111.69,29.05],
+        '保定':[115.48,38.85],
+        '湘潭':[112.91,27.87],
+        '金华':[119.64,29.12],
+        '岳阳':[113.09,29.37],
+        '长沙':[113,28.21],
+        '衢州':[118.88,28.97],
+        '廊坊':[116.7,39.53],
+        '菏泽':[115.480656,35.23375],
+        '合肥':[117.27,31.86],
+        '武汉':[114.31,30.52],
+        '大庆':[125.03,46.58]
+    };
+
+    var convertData = function (data) {
+        var res = [];
+        for (var i = 0; i < data.length; i++) {
+            var geoCoord = geoCoordMap[data[i].name];
+            if (geoCoord) {
+                res.push({
+                    name: data[i].name,
+                    value: geoCoord.concat(data[i].value)
+                });
+            }
+        }
+        return res;
+    };
+
+    function renderItem(params, api) {
+        var coords = [
+            [116.7,39.53],
+            [103.73,36.03],
+            [112.91,27.87],
+            [120.65,28.01],
+            [119.57,39.95]
+        ];
+        var points = [];
+        for (var i = 0; i < coords.length; i++) {
+            points.push(api.coord(coords[i]));
+        }
+        var color = api.visual('color');
+
+        return {
+            type: 'polygon',
+            shape: {
+                points: echarts.graphic.clipPointsByRect(points, {
+                    x: params.coordSys.x,
+                    y: params.coordSys.y,
+                    width: params.coordSys.width,
+                    height: params.coordSys.height
+                })
+            },
+            style: api.style({
+                fill: color,
+                stroke: echarts.color.lift(color)
+            })
+        };
+    }
+
+    option = {
+        backgroundColor: 'transparent',
+        title: {
+            text: '全国主要城市贡献值',
+            subtext: 'Contribution of major cities in China',
+            sublink: 'http://www.pm25.in',
+            left: 'center',
+            textStyle: {
+                color: 'white'
+            }
+        },
+        tooltip : {
+            trigger: 'item'
+        },
+        bmap: {
+            center: [104.114129, 37.550339],
+            zoom: 5,
+            roam: true,
+            mapStyle: {
+                styleJson: [
+                    {
+                        "featureType": "water",
+                        "elementType": "all",
+                        "stylers": {
+                            "color": "#CAE1FF"
+                        }
+                    },
+                    {
+                        "featureType": "land",
+                        "elementType": "all",
+                        "stylers": {
+                            "color": "#FFFFFF"
+                        }
+                    },
+                    {
+                        "featureType": "boundary",
+                        "elementType": "geometry",
+                        "stylers": {
+                            "color": "#FFFFFF"
+                        }
+                    },
+                    {
+                        "featureType": "railway",
+                        "elementType": "all",
+                        "stylers": {
+                            "visibility": "off"
+                        }
+                    },
+                    {
+                        "featureType": "highway",
+                        "elementType": "geometry",
+                        "stylers": {
+                            "color": "#004981"
+                        }
+                    },
+                    {
+                        "featureType": "highway",
+                        "elementType": "geometry.fill",
+                        "stylers": {
+                            "color": "#005b96",
+                            "lightness": 1
+                        }
+                    },
+                    {
+                        "featureType": "highway",
+                        "elementType": "labels",
+                        "stylers": {
+                            "visibility": "off"
+                        }
+                    },
+                    {
+                        "featureType": "arterial",
+                        "elementType": "geometry",
+                        "stylers": {
+                            "color": "#004981"
+                        }
+                    },
+                    {
+                        "featureType": "arterial",
+                        "elementType": "geometry.fill",
+                        "stylers": {
+                            "color": "#FFFFFF"
+                        }
+                    },
+                    {
+                        "featureType": "poi",
+                        "elementType": "all",
+                        "stylers": {
+                            "visibility": "off"
+                        }
+                    },
+                    {
+                        "featureType": "green",
+                        "elementType": "all",
+                        "stylers": {
+                            "color": "#8A5E61",
+                            "visibility": "off"
+                        }
+                    },
+                    {
+                        "featureType": "subway",
+                        "elementType": "all",
+                        "stylers": {
+                            "visibility": "off"
+                        }
+                    },
+                    {
+                        "featureType": "manmade",
+                        "elementType": "all",
+                        "stylers": {
+                            "visibility": "off"
+                        }
+                    },
+                    {
+                        "featureType": "local",
+                        "elementType": "all",
+                        "stylers": {
+                            "visibility": "off"
+                        }
+                    },
+                    {
+                        "featureType": "arterial",
+                        "elementType": "labels",
+                        "stylers": {
+                            "visibility": "off"
+                        }
+                    },
+                    {
+                        "featureType": "boundary",
+                        "elementType": "geometry.fill",
+                        "stylers": {
+                            "color": "#8A5E61"
+                        }
+                    },
+                    {
+                        "featureType": "building",
+                        "elementType": "all",
+                        "stylers": {
+                            "color": "#1a5787"
+                        }
+                    },
+                    {
+                        "featureType": "label",
+                        "elementType": "all",
+                        "stylers": {
+                            "visibility": "off"
+                        }
+                    }
+                ]
+            }
+        },
+        series : [
+            {
+                name: '贡献值',
+                type: 'scatter',
+                coordinateSystem: 'bmap',
+                data: convertData(data),
+                symbolSize: function (val) {
+                    return val[2] / 10;
+                },
+                label: {
+                    normal: {
+                        formatter: '{b}',
+                        position: 'right',
+                        show: false
+                    },
+                    emphasis: {
+                        show: true
+                    }
+                },
+                itemStyle: {
+                    normal: {
+                        color: '#00FF00'
+                    }
+                }
+            },
+            {
+                name: 'Top 5',
+                type: 'effectScatter',
+                coordinateSystem: 'bmap',
+                data: convertData(data.sort(function (a, b) {
+                    return b.value - a.value;
+                }).slice(0, 6)),
+                symbolSize: function (val) {
+                    return val[2] / 10;
+                },
+                showEffectOn: 'emphasis',
+                rippleEffect: {
+                    brushType: 'stroke'
+                },
+                hoverAnimation: true,
+                label: {
+                    normal: {
+                        formatter: '{b}',
+                        position: 'right',
+                        show: true
+                    }
+                },
+                itemStyle: {
+                    normal: {
+                        color: '#00FF00',
+                        shadowBlur: 10,
+                        shadowColor: '#333'
+                    }
+                },
+                zlevel: 1
+            },
+            {
+                type: 'custom',
+                coordinateSystem: 'bmap',
+                renderItem: renderItem,
+                itemStyle: {
+                    normal: {
+                        opacity: 0.5
+                    }
+                },
+                animation: false,
+                silent: true,
+                data: [0],
+                z: -10
+            }
+        ]
+    };;
+    if (option && typeof option === "object") {
+        myChart.setOption(option, true);
+    }
+</script>
+</html>

@@ -1,0 +1,187 @@
+/*----------------*/
+#div1{
+    height: 100px;
+    position:fixed;
+    background-color: #3B3B3B;
+}
+#div1 p{
+    line-height: 34px;
+    position: fixed;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 14px;
+    color: #cbcbcb;
+}
+a:link{text-decoration:none ; }
+a:visited {text-decoration:none ; }
+a:hover {text-decoration:none ; }
+a:active {text-decoration:none ; }
+/*-----------------------------------*/
+*{
+    margin: 0;
+    padding: 0;
+}
+p{
+    color: #9aa0a4;
+}
+.clothing-form{
+    width: 100%;
+    height:575px ;
+    background-color: #F4FFFE;
+}
+.clothing-form h4{
+    font-size: 30px;
+    text-align: center;
+}
+.clothing-form p{
+    font-size: 16px;
+    text-align: center;
+    color: #999999;
+}
+.clothing-form_input{
+    width: 1140px;
+    height: 372px;
+    margin: 0 auto;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+}
+.clothing-form_input_left{
+    width: 464px;
+    height: 372px;
+    display: flex;
+    flex-direction:column ;
+    justify-content:space-around;
+}
+.clothing-form_input_left input{
+    width: 370px;
+    height: 40px;
+    border: 1px solid #ced4da;
+    background-color: #F8F8F8;
+    border-radius: 5px;
+}
+#clothing-form_input_captch{
+    width: 230px;
+    height: 40px;
+}
+.clothing-form_input_captch button{
+    color: #00a0e9;
+    border-radius: 5px;
+    border:  1px solid #00a0e9;
+    background-color: white;
+    width: 106px;
+    height: 38px;
+}
+.clothing-form_input_captch button:hover{
+    color: white;
+    background-color:#17a2b8;
+    border-radius: 5px;
+    border:  1px solid #00a0e9;
+}
+.clothing-form_input_right{
+    width: 464px;
+    height: 372px;
+    text-align: left;
+    display: flex;
+    flex-direction:column ;
+    justify-content:space-around;
+}
+.clothing-form_input_right input{
+    width: 370px;
+    height: 40px;
+    border: 1px solid #ced4da;
+    background-color: #F8F8F8;
+    border-radius: 5px;
+}
+#remark{
+    width: 372px;
+    height: 124px;
+}
+.clothing-form_input_name p{
+    font-size: 11px;
+    color: red;
+    display: none;
+}
+.clothing-form_input_phone p{
+    font-size: 11px;
+    color: red;
+    display: none;
+}
+.clothing-form_input p{
+    display: none;
+}
+.clothing-form_input_clothes p{
+    font-size: 11px;
+    color: red;
+    display: none;
+}
+/*.clothing-form_input_captch p{*/
+/*    font-size: 11px;*/
+/*    color: red;*/
+/*    display: none;*/
+/*}*/
+.clothing-form_input_addr p{
+    font-size: 11px;
+    color: red;
+    display: none;
+}
+.clothing-form_input_paraddr p{
+    font-size: 11px;
+    color: red;
+    display: none;
+}
+.clothing-form_input_time p{
+    font-size: 11px;
+    color: red;
+    display: none;
+}
+.clothing-form_input_left span{
+    color: red;
+}
+.clothing-form_input_right span{
+    color: red;
+}
+.clothing-subscribe{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+}
+.clothing-subscribe span{
+    font-size: 90px;
+}
+.subscribe_index1{
+    margin-top: 3%;
+    text-align: center;
+}
+.clothing-subscribe p{
+    font-size: 20px;
+    color: #9aa0a4;
+    text-align: center;
+}
+.clothing_show {
+display: flex;
+flex-direction: row;
+    justify-content: space-around;
+}
+.clothing_show img{
+    width: 240px;
+    height: 240px;
+    border-radius: 5px;
+ }
+.clothing_show p{
+    width: 280px;
+    color: black;
+}
+.clothing_show h5{
+    text-align: center;
+    margin-top: 20px;
+}
+#clothing-form_input_btn{
+    width: 160px;
+    height: 40px;
+    background-color: #55E2EB;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid #55E2EB;
+}

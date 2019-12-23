@@ -1,0 +1,103 @@
+/* 整体css */
+a:link{text-decoration:none ; }
+a:visited {text-decoration:none ; }
+a:hover {text-decoration:none ; }
+a:active {text-decoration:none ; }
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	width: 100%;
+	background-color: rgba(203,254,188,0.3);
+}
+@font-face
+{
+font-family: myFirstFont;
+src: url('../../../Font/Deng.ttf');
+}
+/* 头部样式 */
+.heard{
+	display: flex;
+	width: 80%;
+	height: 6vh;
+	margin: 20px auto;
+	line-height: 6vh;
+	background: url(../img/heard3.jpg);
+	background-size: cover;
+	justify-content: space-around;
+	border-radius: 25px;
+}
+.heard h1{
+	-webkit-text-stroke: 1.3px darkslategrey;
+	-webkit-text-fill-color: transparent;
+}
+/* 主体 */
+#body{
+	width: 80%;
+	margin: 0 auto;
+	
+}
+#body .choice{
+	width: 80%;
+	display: flex;
+	margin: 0 auto 20px auto;
+	justify-content: space-around;
+	font-size: 16px;
+	color:rgba(0,100,0,0.5);
+	padding-bottom: 10px;
+	border-bottom: 2px dotted rgba(0,100,0,0.5);
+	
+}
+#body .choice h2:hover{
+	color: rgba(0,100,0) ;
+}
+/* 内容板块 */
+#content {
+	width: 90%;
+	min-height: 650px;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	background-color: rgba(221,241,215,0.4);
+	border-radius: 15px;
+}
+	/* 内容小模块 */
+#content .content_side{
+	width: 98%;
+	height: 30vh;
+	margin: 10px auto;
+	display: flex;
+	justify-content: center;
+	padding-top: 1vh;
+	background-color: rgba(255,255,255,0.5);
+	border-radius: 15px;
+	border-bottom: 1.5px solid rgba(0,200,0,0.3);
+
+}
+#content .content_side .img{
+	width: 38%;
+	height: 28vh;
+}
+#content .content_side .text{
+	width: 50%;
+	height: 29vh;
+	padding: 0px 10px;
+	font-family: myFirstFont;
+}
+#content .content_side .text .title{
+	margin: 20px 0 10px 0;
+	font-size: 19px;
+}
+#content .content_side .text .skip{
+	margin-top: 20px;
+}
+/* 尾部部分 */
+#footer {
+	text-align: center;
+	font-family: myLogoFont;
+	margin-bottom: 10px;
+	-webkit-text-stroke: 2px rgba(0, 140, 0, 0.5);
+	-webkit-text-fill-color: transparent;
+	margin-top: 3vh;
+}

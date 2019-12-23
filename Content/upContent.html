@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>发布项目</title>
+		<link rel="stylesheet" type="text/css" href="css/upContent.css">
+	</head>
+	<body>
+		<!-- 头部 -->
+		<div id="heard">
+			<h1>自然之友·项目发布</h1>
+		</div>
+		<!-- 项目类型 -->
+		<div id="sort">
+			<div>
+				<span>请选择公益类型:</span>
+				<input type="text" list="x_sort" id='project_sort' placeholder="选择公益类型。">
+				<datalist id="x_sort">
+					<option >公益捐款</option>
+					<option >义务支教</option>
+					<option >环境保护</option>
+				</datalist>	
+			</div>
+			<div>
+				<span>选择项目招募时间:</span>
+				<input type="date" name="" id="startime">-
+				<input type="date" name="" id="endtime">	
+			</div>
+		</div>
+		<!-- 项目简介 -->
+		<div id="brief">
+			<p class="heard">项目介绍</p>
+			<div class="brief_content">
+				<!-- 封面 -->
+				<div class="brief_img">
+					<img src="img/drief.jpg" id="brief_img" />
+					<div style="position: absolute;right: 10%;top: 10%; width:120px;height: 80%; border-left: 2px solid #C4E3F3;line-height: 20vh;">
+						<button type="button" class="img_button">
+							<b>选择封面</b>
+							<input type="file" id="updata_img_brief" >
+						</button>
+					</div>
+				</div>
+				<!-- 主体和简要概述 -->
+				<div class="brief_text">
+					<h3 style="color: rgba(0,150,0,0.5);">主题</h3>
+					<input type="text" class="title" placeholder="填写主题" />
+					<h3 style="color: rgba(0,150,0,0.5);">简介</h3>
+					<p contenteditable="true" class="content" >请添加需要描述的内容哦~~</p>
+				</div>
+			</div>
+		</div>
+		<hr width="90%" style="margin: 20px auto; " />
+		<!-- 项目具体内容 -->
+		<div id="content">
+			<p class="heard">项目内容</p>
+			<!-- 内容控件 -->
+			<div id="table_control">
+				<!-- 标题控件 -->
+				<div class="control_meus_1 meus">
+					<i style="background: url(img/meus_1.png) no-repeat; background-size: cover;"></i>
+					<div style="left: 5%;">
+						<p style="border-bottom: 1px solid #ccc">选择标题</p>
+						<h1>H</h1>
+						<h2>H</h2>
+						<h3>H</h3>
+						<h4>H</h4>
+						<h5>H</h5>
+						<h6>H</h6>	
+					</div>
+				</div>
+				<!-- 加粗控件 -->
+				<div class="control_meus_2">
+					<i style="background: url(img/meus_2.png) no-repeat;background-size: cover;"></i>
+				</div>
+				<!-- 颜色控件 -->
+				<div class="control_meus_3 meus">
+					<i style="background: url(img/meus_3.png) no-repeat; background-size: cover;"></i>
+					<div style="left: 45%;">
+						<p style="border-bottom: 1px solid #ccc">默认字体</p>
+						<span style="color: red">红色字体</span>
+						<span style="color: blue">蓝色字体</span>	
+						<span style="color: green">绿色字体</span>	
+					</div>
+				</div>
+				<!-- 文本方式控件 -->
+				<div class="control_meus_4 meus">
+					<i style="background: url(img/meus_4.png) no-repeat; background-size: cover;"></i>
+					<div style="left: 65%;">
+						<p style="border-bottom: 1px solid #ccc">文本样式</p>
+						<span>文本靠左</span>	
+						<span>文本居中</span>	
+						<span>文本靠右</span>	
+					</div>
+				</div>
+				<!-- 添加图片控件 -->
+				<div class="control_meus_5 meus">
+					<i style="background: url(img/meus_5.png) no-repeat;background-size: cover; "></i>
+					<div style="left: 85%;">
+						<button type="button" id="c_img_but">上传图片
+							<input type="file" multiple id="updata_img_content" >
+						</button>	
+					</div>
+				</div>
+			</div>
+			<!-- 具体内容 -->
+			<div id="content_text" contenteditable="true">
+				<p>在这里输入你想要编写的内容.. </p>
+			</div>
+		</div>
+		<!-- 提交按钮 -->
+		<div id="up_button">
+			<button type="button" id='updata_btn'>发布项目</button>
+			<p style="font-size:12px; color:rgb(0, 140, 0); ">项目一但上传,就不能修改了,请决定无误后再上传哦。</p>
+		</div>
+		<!-- 尾部部分 -->
+		<div id="footer" style="color: rgba(0, 140, 0, 0.5);text-align: center;font-family: myLogoFont; margin-bottom: 10px;">
+			<h1>自然之友·项目</h1>
+		</div>
+
+
+		<script src="../comment_js/jquery-3.4.1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				// 封面图片的添加
+				var brief_img;//标题文件名
+				$('#updata_img_brief').change(function(event) {
+					//获取文件对象
+					var img = this.files[0];
+					if (typeof(FormData) != 'underfind') {
+						var formData = new FormData();
+						formData.append('img',img);
+						//获取图片名字
+						var imgName = $(this)[0].value;
+						// 获取图片后缀名
+						var imgTrue = imgName.substring(imgName.lastIndexOf('.') + 1).toLowerCase();
+						//判断图片是否符合条件
+						if (imgTrue == 'jpeg' ||imgTrue ==  'png' ||imgTrue ==  'jpg' ||imgTrue ==  'gif') {
+							//通过ajax调用后台
+							$.ajax({
+								url: '../php/upimage.php',
+								type: 'POST',
+								processData :false, // 不处理发送的数据，因为data值是Formdata对象，不需要对数据做处理
+								contentType :false, // 不设置Content-type请求头
+								data: formData,
+								success : function(data){
+									if (data != 1) {
+										$('#brief_img').attr('src','../updata/'+data);
+										brief_img = data;
+									}else{
+										alert('图片添加失败');
+									}
+								}
+							});
+						}else{
+							alert('没有上传图片哦.');
+						}
+					}else{
+						alert('该浏览器不支持.')
+					}
+				});
+				// 工具栏
+				$('#content #table_control .meus').hover(function() {
+					$(this).children('i').css('opacity', '1');
+					$(this).children('div').show();
+				}, function() {
+					$(this).children('i').css('opacity', '0.5');
+					$(this).children('div').hide();
+				});
+				var position;
+				//绑定文本焦点改变事件 注意：firefox不支持document.onselectionchange，可以换成别的事件来触发比如mouseup什么的
+				$('#content #content_text').bind("keyup click",function (e) {
+					//判断元素属性
+					if (e.keyCode == 13) {
+						if ( position.nodeName == 'H1' || position.nodeName == 'H2' || position.nodeName == 'H3' || position.nodeName == 'H4' ||position.nodeName == 'H5'|| position.nodeName == 'H6' || position.nodeName == 'FONT' || position.nodeName == 'DIV') {
+							var text = $(position).next().html();
+							if(text == ''){
+								var content = '<br>';
+							}else{
+								var content = text;
+							}
+							$(position).next().replaceWith($('<p/>',{html:content}));
+						}
+					}
+					//判断是否为空
+					if (e.keyCode == 8) {
+						if ($('#content #content_text').html() == '') {
+							$('#content #content_text').append('<p><br/></p>');
+						}
+					}
+					//判断是否支持document.selection属性
+					if (window.getSelection) {
+						//获取Selection对象
+						var se = window.getSelection();
+						//获取起始的dom元素
+						var startEl = se.anchorNode.parentElement;
+						if (startEl.nodeName == "SPAN" || startEl.nodeName == "FONT") {
+							var parent = $(startEl).parent();
+							if (parent[0].nodeName == 'P' || parent[0].nodeName == 'H1'|| parent[0].nodeName == 'H2'|| parent[0].nodeName == 'H3'|| parent[0].nodeName == 'H4'|| parent[0].nodeName == 'H5'|| parent[0].nodeName == 'H6') {
+								position = parent[0];
+							}else{
+								position = startEl;
+							}
+						}else if (startEl.nodeName == "P"){
+							var parent = $(startEl).parent();
+							if (parent[0].nodeName == 'DIV') {
+									position = startEl;
+							}else{
+								position = parent[0];
+							}
+						}else if (startEl.nodeName == "DIV"){
+							return;
+						}else{
+							position = startEl;
+						}
+					}
+					console.log(position);
+				})
+				// <!-- 标题控件 -->
+				$('#table_control .control_meus_1 div').children().click(function(event) {
+					var sort = $(this)[0].tagName;
+					var html = $(position).html();
+					var style = $(position).attr('style');
+					$(position).replaceWith($('<'+sort+'/>',{html : html,style:style}));
+
+				});
+				// 字体加粗
+				var num = 1;
+				$('#table_control .control_meus_2 i').click(function(event) {
+					if (num == 1){
+						$(this).css('opacity', '1');
+						$(position).append("<span style='font-weight : bold'>&nbsp;</span>");
+						num++;
+					}else if (num == 2){
+						$(this).css('opacity', '0.5');
+						$(position).append("&nbsp;");
+						num = 1;
+					}	
+				})
+				// 文本字体颜色
+				$('#table_control .control_meus_3 div').children().click(function(event) {
+					var text = $(this).text();
+					if (text == '默认字体') {
+						$(position).append("&nbsp;");
+						return;
+					}else {
+						if (text == '红色字体') {
+						 	var type = 'red';
+						}else if (text == '蓝色字体'){
+						 	var type = 'blue';
+						 }else if (text == '绿色字体'){
+						 	var type = 'green';
+						 }
+						 $(position).append("<span style='color : "+type+";'>&nbsp;</span>");
+					}
+				});
+				// 字体文本排版
+				$('#table_control .control_meus_4 div').children().click(function(event) {
+					var text = $(this).text();
+					 if (text == '文本居中') {
+					 	var type = 'center';
+					 }else if (text == '文本靠左'){
+					 	var type = 'left';
+					 }else if (text == '文本靠右'){
+					 	var type = 'right';
+					 }
+					$(position).css('textAlign', type);
+				});
+				// 内容图片的添加
+				$('#updata_img_content').change(function(event) {
+					//获取文件对象
+					var img = this.files[0];
+					if (typeof(FormData) != 'underfind') {
+						var formData = new FormData();
+							formData.append('img',img);
+						//获取图片名字
+						var imgName = $(this)[0].value;
+						// 获取图片后缀名
+						var imgTrue = imgName.substring(imgName.lastIndexOf('.') + 1).toLowerCase();
+						//判断图片是否符合条件
+						if (imgTrue == 'jpeg' ||imgTrue ==  'png' ||imgTrue ==  'jpg' ||imgTrue ==  'gif') {
+							//通过ajax调用后台
+							$.ajax({
+								url: '../php/upimage.php',
+								type: 'POST',
+								processData :false, // 不处理发送的数据，因为data值是Formdata对象，不需要对数据做处理
+								contentType :false, // 不设置Content-type请求头
+								data: formData,
+								success : function(data){
+									if (data != 1) {
+										var html = "<p><img src='../updata/" + data + " ' style='width:60%;'></p>";
+										$(position).after(html);
+									}else{
+										alert('图片添加失败');
+									}
+								}
+							});	
+						}else{
+							alert('选择图片文件哦!');
+						}
+					}else{
+						alert('该浏览器不支持.');
+					}
+				});
+				// 图片事件
+				$('#content #content_text').on('dblclick','p img', function(){
+					position = $(this).parent();
+				})
+				// 发布按钮提交数据库
+				$('#updata_btn').click(function(event) {
+					var sort = $('#project_sort').val();
+					if (sort != '') {
+						if (sort == '公益捐款') {
+							var bri_sort = 1;
+						} else if ( sort == '义务支教') {
+							var bri_sort = 2;
+						} else if (sort == '环境保护') {
+							var bri_sort = 3;
+						}
+						var startime = $('#startime').val();
+						var endtime = $('#endtime').val();
+						if (startime == '' || endtime == ''){
+							alert('请设置具体招募时间');
+							return;
+						}
+						var pro_endtime = startime+'---'+endtime;
+						var title = $('#brief .brief_content .brief_text .title').val();
+						if (title == '') {
+							alert('请填写主题.');
+							return;
+						}
+						if (brief_img == null) {
+							alert('请选择封面哟~~');
+							return;
+						}
+						var bri_content = $('#brief .brief_content .brief_text .content').text();
+						var pro_content = $('#content #content_text').html().replace(/[\n||\t||\r]/g,"");//获取内容格式
+						var uid = sessionStorage.getItem('com_id');
+						console.log(uid);
+						$.ajax({
+							url: '../php/usePost.php',
+							type: 'POST',
+							data: {
+								direction: 'upcontent',
+								content : {
+									'com_id' : uid,
+									'bri_sort' : bri_sort,
+									'bri_img' : brief_img,
+									'title' : title,
+									'bri_content' : bri_content,
+									'pro_endtime' : pro_endtime,
+									'pro_content' : pro_content
+								},
+							},
+							success : function(e){
+								if (e == 'true') {
+									alert('项目发布成功,等待管理员审批。');
+									//成功之后会跳转到企业个人中心
+									window.location.replace('../userpage/company/comUser.html');
+								}else if (e == 'false') {
+									alert('项目发布失败,请重新上传.');
+								}
+							}
+						})					
+					}else{
+						alert('请选择发布项目类型。');
+					}
+				});
+			})
+		</script>
+	</body>
+</html>

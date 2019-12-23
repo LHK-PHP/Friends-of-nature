@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>义务支教</title>
+		<link rel="stylesheet" type="text/css" href="css/content.css">
+	</head>
+	<body>
+		<!-- 设置头部 -->
+		<div id="heard">
+			<h3 class="logo">自然之友·爱心支教</h3>
+			<h2 class="title">加载中...</h2>
+			<div class="button">
+				<button type="button" class="Go">申请支教</button>
+			</div>
+		</div>
+		<!-- 内容部分 -->
+		<div id="content">
+			<!-- 所属社团 -->
+			<div class="organizer">
+				<p>发起社团:<span class="organize"></span></p>
+			</div>
+			<!-- 时间限制 -->
+			<div class="content_time">
+				<p>发布时间:<span id="startime"></span></p>
+				<p>招募时间:<span id="endtime"></span></p>
+			</div>
+			<!-- 发布内容 -->
+			<div class="content_text"></div>
+			<!-- 返回上一级 -->
+			<div class="return">
+				<button type="button" class="black">&lt;&lt;返回</button>
+			</div>
+		</div>
+		<!-- 尾部部分 -->
+		<div id="footer" style="color: rgba(0, 140, 0, 0.5);text-align: center;font-family: myLogoFont; margin-bottom: 10px;">
+			<h1>自然之友·爱心支教</h1>
+		</div>
+		
+		
+		<script src="../comment_js/jquery-3.4.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../comment_js/func.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			// 制作页面基本功能
+			$(function(){
+				//-----获取网址栏需要内容
+				var winArr = search();
+				var com_id = null;
+				//---通过ajax获取数据库内容并展示在页面
+				$.ajax({
+					type : 'get',
+					url : "../php/demo.php",
+					data : {
+						direction : 'content',
+						id : winArr.id
+					},
+					success : function(event){
+						if (event != '[]') {
+							var data = $.parseJSON(event);
+							$('#heard .title').text(data[0].pro_title);
+							// 用户表还没有创建
+							$('#startime').text(data[0].pro_time);
+							$('#endtime').text(data[0].pro_endtime);
+							$('#content .content_text').html(data[0].pro_content);
+							$('#content .organizer .organize').text(data[0].user);
+							com_id = data[0].com_id;
+						} else{
+							alert('还没有数据');
+						}
+						return;
+					}
+				})
+				//按钮显示内容
+				if (sessionStorage.getItem('com_id') != null || sessionStorage.getItem('admin_id') != null) {
+					$('#heard .button .Go').hide();
+				}else{
+					if (sessionStorage.getItem('u_id') != null) {
+						var u_id = sessionStorage.getItem('u_id');
+						var pro_id = winArr.id;
+						//调用按钮函数
+						butn(u_id,pro_id);
+					}	
+				}
+				// -----申请项目按钮
+				$('#heard .button .Go').click(function(){
+					if (sessionStorage.getItem('u_id') == null) {
+						if (confirm('你还没有登录不能申请，是够立即登录。')) {
+							window.location.assign("../login and res/login.html");
+						} else {
+							return;
+						}
+					}
+					//获取内容
+					var dom = $(this);
+					var text = $(this).text();
+					//设置样式
+					$(this).text('正在提交');
+					$(this).attr('disabled',true);
+					//获取重要数据
+					var u_id = sessionStorage.getItem('u_id');
+					var pro_id = winArr.id
+					//向后台发布请求
+					$.ajax({
+						url : '../php/usePost.php',
+						type :'post',
+						data : {
+							direction : 'userButn',
+							u_id  : u_id,
+							pro_id : pro_id
+						},
+						success : function(e){
+							if (e == 1) {
+								$(dom).text('审核当中');
+								$(dom).attr('disabled',true);
+							} else{
+								alert('数据请求失败,请重新提交');
+								$(dom).text(text);
+								$(dom).attr('disabled',false);
+							}
+						}
+					})
+					
+				})
+				// ------点击组织者进入其个人中心
+				$('#content .organizer .organize').click(function(){
+					console.log('组织者');
+					// 跳转到企业中心
+					window.location.assign('../userpage/company/comUser.html?com_id='+com_id);
+				})
+				//-----返回上一级按钮
+				$('#content .return .black').click(function(){
+					window.history.back();
+				})
+			})
+			/**
+			 * 按钮操作属性
+			 * @param  {[type]} u_id   [用户id]
+			 * @param  {[type]} pro_id [项目id]
+			 * @return {[type]}        
+			 */
+			function butn(u_id,pro_id){
+				//连接后台查询
+				$.ajax({
+					url: '../php/demo.php',
+					type: 'GET',
+					data: {
+						direction : 'butn',
+						u_id : u_id,
+						pro_id : pro_id
+					},
+					success : function(e){
+						//判断用户是否申请过
+						if (e != '[]') {
+							//判断用户当前状态
+							$('#heard .button .Go').attr('disabled', true);
+							//获取后台数据
+							var data =  $.parseJSON(e);
+							if(data[0].user_state == 0){
+								$('#heard .button .Go').text('审核当中');
+							}else if (data[0].user_state == 1) {
+								$('#heard .button .Go').text('已经参加');
+							}else if (data[0].user_state == 2) {
+								$('#heard .button .Go').css('backgroundColor', 'rgba(180,0,0,0.5)');
+								$('#heard .button .Go').text('审核失败');
+							}
+						}
+					}
+				})				
+			}
+		</script>
+	</body>
+</html>

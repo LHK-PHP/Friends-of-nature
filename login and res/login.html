@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>登录</title>
+		<link rel="stylesheet" type="text/css" href="css/register.css"/>
+		
+	</head>
+	<body>
+		
+		<div class="register">
+			<div class="regist">
+				登录
+			</div>
+			<form name="form" method="post">
+				
+			<div class="log">
+				<span>还没账号，请先<a href="res.html" style="text-decoration: none;">注册</a></span>
+			</div>
+			<div class="account">
+				账号:<input type="text" name="user" id="user"  />
+			</div>
+			<div class="pass">
+				密码:<input type="password" name="password" id="password" value="" />
+			</div>
+			</form>
+			<div class="regis">
+				<button id="button">立即登录</button>
+			</div>
+			<div class="warning"></div>
+			<div class="warning-two"></div>
+		</div>
+
+		<script src="../comment_js/jquery-3.4.1.js" type="text/javascript" charset="UTF-8"></script>
+		<script type="text/javascript" charset="UTF-8">
+	
+			
+		
+$(function(){
+	var pattern =  /^(?![\d]+$)(?![a-zA-Z]+$)(?![^\da-zA-Z]+$).{6,20}$/;
+	$('#button').click(function(){
+		//	获取文本框里的内容
+	var user = document.getElementById('user').value;
+	
+	var pass = document.getElementById('password').value;
+		if(user==""||pass==""){
+			alert("账号或密码不能为空");
+			return;
+		};
+		
+		 if(!pattern.test(pass)){
+			$('.warning-two').empty();
+			$('.warning-two').append("请输入正确的密码"); 
+			return;
+		}else{
+			$('.warning-two').empty();
+		};
+		$.ajax({
+			
+			type : "post",
+			url : "php/login.php",
+			data : {
+				user:user,
+				passwd:pass
+			},
+			success : function(res){					
+			var arr=$.parseJSON(res);
+				if(arr.length>0){		
+			sessionStorage.removeItem('u_id');
+			sessionStorage.removeItem('com_id');
+			sessionStorage.removeItem('admin_id');
+			
+			if(arr[0].com==1){
+				sessionStorage.setItem('com_id', arr[0].id)
+			}else{
+				sessionStorage.setItem('u_id', arr[0].id)
+			}
+			window.history.back();
+			}else{
+				alert("账号或者密码错误")
+			}													
+		}
+	})
+		
+})
+	
+
+		
+
+
+})
+
+
+
+
+		
+	</script>
+	</body>
+</html>

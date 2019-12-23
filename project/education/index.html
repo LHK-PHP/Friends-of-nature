@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>义务支教</title>
+		<link rel="stylesheet" type="text/css" href="css/01.css"/>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+		<style type="text/css">
+			 /*头部*/
+			#header{
+				width: 100%;
+				height: 60px;
+				color: paleturquoise;
+				position: relative;
+				font-family: "宋体";
+				background-color: azure;
+			}
+			.logo img{
+				width: 100px;
+				height: 60px;
+				top: 0px;
+				left: -17px;
+				position: absolute;
+				
+			}
+			.header-a{
+				width: 50%;
+				height: 40px;
+				top: 10px;
+				left:35%;
+				font-size: 20px;
+				position: absolute;
+			   text-align: center;
+			   margin: 0 auto;
+			   
+			}
+		  .phone{
+		  	    position: absolute;
+		  	    top: 5px;
+		  	    right:-85px;
+		  	    float: right;
+		  	    width: 150px;
+		  	    height: 30px;
+		  	    color: white;
+		  	    background-color: #91ca06;
+		  border-radius: 10px;
+		  	    line-height: 30px;
+		  }
+		  /* 尾部 */
+		  #div1{
+				height: 20vh;
+				background-image: url(../../homeImg/456.png);
+				text-align: center;
+				line-height: 4vh;
+			}
+			#div1 p{
+				font-size: 12px;
+				color: #686868;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script type="text/javascript">
+			
+			$(function(){
+				$('.tab').click(function(){
+					var index = $('.tab').index(this);
+					console.log(index);
+					$('.tab-content').eq(index).css('display','block');
+					$('.tab-content').eq(index).siblings('.tab-content').css('display','none');
+			
+				})
+		})
+		</script>
+		<div id="header">
+			<div class="logo">
+				<a href="contribute.html"><img src="img/logo.png"/></a>
+			</div>
+			<div class="header-a">
+		       <div class="bs-example">
+				     <ul class="nav nav-pills" role="tablist">
+				      <li role="presentation" class="activ"><a  href="../../index.html">首页</a></li>&nbsp;
+				      <li role="presentation" class="dropdown">
+				      <a id="drop4" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+						  项目分类
+				        <span class="caret"></span>
+				      </a>&nbsp;
+				       <ul id="menu1" class="dropdown-menu" aria-labelledby="drop4">
+				        <li><a href="../../Public funds/show.html">公益资金</a></li>
+				        <li><a href="../../clothes recycling/show.html">爱心捐衣</a></li>
+				        <li><a href="../environment/index.html">保护环境</a></li>
+				        <li><a href="#">义务支教</a></li>
+				        <li><a href="../garbage/xiangmu.html">垃圾分类</a></li>
+				       </ul>
+		           </li>
+				     <li role="presentation" class="dropdown">
+				        <a id="drop5" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+				          加入我们
+				          <span class="caret"></span>
+				        </a>&nbsp;
+			          <ul id="menu2" class="dropdown-menu" aria-labelledby="drop5">
+			          <li><a id="company" onclick="alert('欢迎你的加入,具体请联系QQ:1649681210')">申请企业账户</a></li>
+			          </ul>
+			      </li>
+		        <li role="presentation" class="dropdown">
+		        <a id="drop6" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+		         登录
+		          <span class="caret"></span>
+		        </a>&nbsp;
+			   <ul id="menu3" class="dropdown-menu" aria-labelledby="drop6">
+			     <li id="login"><a>登录</a></li>		
+			   </ul>
+		       </li>
+		</ul> 
+		      </div> 
+		      <div class="phone">
+		      	<img class="phone1" src="img/phone.png"/>
+		      	<span class="">400-260-0852</span>
+		      </div>
+		   </div>
+		</div>
+		<!-- 主题 -->
+		<div id="heard1">
+			<div class="top-shade">	</div>
+			<div class="top-intro">
+				<h1>你来过的痕迹依然遍布在他们的生活中<br />
+			你让他们明白知识是改变生活的希望<br />
+			你帮他们打造遍地书香四溢；<br />
+			你让他们理解只要同心协力<br />
+			小小的村落也能变成丰富的世界追寻你的精神<br />
+			将爱心播撒，让希望萌芽！</h1>
+			</div>
+			<div class="nav">
+				<ul>
+					<li><a href="html/nchzxy.html">农村孩子的真实需要</a></li>
+					
+				</ul>
+			</div>
+		</div>
+		<div class="box-brand">
+			<h1>
+			<img src="img/title1.png" class="title-pic"/>
+			" 自然之友活动"
+			<img src="img/title0.png" class="title-pic"/>
+		</h1>
+		<div class="slide">
+			<div class="pic" id="pic-1">
+				<img src="img/04.jpg"/>
+				<span>
+					<div style="font-size: 12px;font-weight: bold;">为爱奔跑</div>
+					全称自然之友为爱奔跑公益环校跑活动。作为自然之友历年的传统活动，每年都会吸引一大群热心学子的关注和参与。自开办以来，为爱奔跑已经连续举办六届，并通过报名费筹集了暖冬计划、阳光包裹计划等项目的资金，为山区孩子提供帮助
+				</span>
+			</div>
+			<div class="pic">
+				<img src="img/brand-2.jpg"/>
+				<span>
+					<div style="font-size: 12px;font-weight: bold;">图片展</div>
+					通过展示自然之手志愿者在暑假期间前往支教点支教助学过程中，拍摄到的孩子们在山区的学习和生活状况以及志愿者的工作状况的照片，让广大在校学子了解我们团队支教助学活动，并呼吁他们对明信片进行认捐的方式，为山区孩子献出爱心。
+				</span>
+			</div>
+			<div class="pic" >
+				<img src="img/brand-3.jpg"/>
+				<span>
+					<div style="font-size: 12px;font-weight: bold;">支教</div>
+					每年，自然之手志愿者都会到山区小学进行支教授课活动，团队在各个地区小学支教，并开展了一对一资助、暖冬计划、图书室计划等助学项目。
+				</span>
+			</div>
+			
+		   </div>
+		 </div>
+	    <div class="box-intro" align="center">
+	    <a id="intro"></a>
+	    <h1>
+			<img src="img/title1.png" class="title-pic"/>
+			"关于支教"
+			<img src="img/title0.png" class="title-pic"/>
+		</h1>
+		
+		<div class="tab-wrap">
+			<input type="radio" class="tab" id="tab1" checked="checked"/>
+				<!--设置一个默认状态-->
+			<label for="tab1">宗旨</label>
+			<input type="radio" class="tab" id="tab2"/>
+			<label for="tab2">目的</label>
+			<input type="radio" class="tab" id="tab3"/>
+			<label for="tab3">原则</label>
+			<input type="radio" class="tab" id="tab4"/>
+			<label for="tab4">支教行</label>
+		<!--<div>-->
+		<div class="tab-content">
+			<h2>献我爱心,关爱贫困偏远地区学童；支教烛光,照亮每一寸渴望的土地。
+</h2>
+		</div>
+		<div class="tab-content">
+			<h2>实际行动，解贫困边远地区教育的燃眉之急；为有志于投身支教的人士提供机会；实地走访，真实反馈，为当地教育筹募援助。</h2>
+		</div>
+		<div class="tab-content">
+			<h2>真实性：资料的真实性。
+民间性：保持民间活动的自主，自发、自愿、自由。
+公益性：保证以公共利益为先的性质。
+开放性：接受社会的监督与质疑。
+原则性：主张志愿者有能力的基础上参与活动。
+自愿性：来去自由。</h2>
+		</div>
+		<div class="tab-content">
+			<h2>支教行----用心传递温暖，把爱带进校园</h2>
+		</div>
+		<!--</div>-->
+		</div>
+	   </div>
+	   <div class="box-philo">
+	   	<h1>我们不是做好事,而是把事做好</h1>
+	   	<h2>因为存在,所以追寻;因为关注,所以付出</h2>
+	   </div>
+		<!-- 尾部 -->
+		<div id="div1">
+			<p class="db">© 2013-2019 zrzy.com &nbsp;&nbsp;&nbsp;版权所有 ICP证：京ICP备14000186号-10</p>
+			<p class="db"><img src="../../homeImg/ZQQ5OB3U}~J@T6}9PV@YWCW.png"/>京公网安备11010102002019&nbsp;&nbsp;&nbsp;建议使用1024*768以上分辨率浏览</p>
+			<p class="db">互联网违法和不良信息举报中心:0571-81683755 &nbsp;&nbsp;&nbsp;blxx@list.alibaba-inc.com</p>
+		
+		</div>
+
+	
+	
+	
+	<script src="js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.dropdown-toggle').dropdown();
+			
+			$(".dropdown>li").mouseover(function(){
+				var $menu3 = $(this).children("#menu3");
+				$menu3.stop();
+				$menu3.slideDown(800);
+			});
+				$(".dropdown>li").mouseleave(function(){
+				var $menu3 = $(this).children("#menu3");
+				$menu3.stop();
+				$menu3.slideUp(800);
+			});
+			//头部
+			$('#menu3 #login').click(function(event) {
+		        if (sessionStorage.getItem('u_id') != null | sessionStorage.getItem('com_id') != null |sessionStorage.getItem('admin_id') != null ) {
+		            alert('已经登录,无需在登录!');
+		        }else{
+		            window.location.assign('../../login and res/login.html');
+		        }
+		    });
+		});
+	</script>
+	</body>
+</html>

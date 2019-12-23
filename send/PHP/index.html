@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="">
+
+</form>
+</body>
+<script src="jquery-3.4.1.js"></script>
+<script>
+    var name = "13213930868";
+    var pwd = "6d3b74bee8b7f2f1004a79172";
+    var context = "您的验证吗为111111";
+    var Mobile = "13213930868";
+    var tid ="114923";
+    var sid = "201039";
+    $.ajax({
+        type:"post",
+        url:"send_font_message.php",
+        data:"Account="+name+"&Pwd="+pwd+"&Content="+context+"&Mobile="+Mobile+"&TemplateId="+tid+"&SignId="+sid,
+        success:function (res) {
+            console.log(res);
+        }
+    })
+</script>
+</html>

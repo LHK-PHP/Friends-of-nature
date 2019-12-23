@@ -1,0 +1,317 @@
+#div1{
+    height: 100px;
+    position:absolute;
+    bottom: -341%;
+    width: 100%;
+    background-color: #3B3B3B;
+}
+#div1 p{
+    line-height: 34px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 14px;
+    color: #cbcbcb;
+}
+/*------------------------------------*/
+p{
+    color: #999999;
+}
+a:link{text-decoration:none ; }
+a:visited {text-decoration:none ; }
+a:hover {text-decoration:none ; }
+a:active {text-decoration:none ; }
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+}
+.text{
+    text-align: center;
+    margin-top: 50px;
+}
+.text p{
+    color: #9aa0a4;
+}
+.text span{
+    font-family: "ËÎÌו", couriernew, courier, monospace;
+    font-size: 50px;
+    color: #00CCFF;
+}
+.show_number{
+    display: flex;
+    justify-content:space-around;
+}
+.show_number div{
+    flex-direction: row;
+    text-align: center;
+}
+.num1 span{
+    font-size: 70px;
+    font-family: "ËÎÌו", couriernew, courier, monospace;
+    color: #20E3CB;
+}
+.num2 span{
+    font-family: "ËÎÌו", couriernew, courier, monospace;
+    font-size: 70px;
+    color: #20E3CB;
+}
+.num1 p{
+    font-size: 20px;
+}
+.num2 p{
+    font-size: 20px;
+}
+.current{
+    width: 240px;
+    position: absolute;
+    left: 15%;
+}
+.current_part1{
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 220px;
+    font-size: 30px;
+    background-color:#55E1EA;
+    width:220px;
+    height:220px;
+    border-radius:3%;
+}
+.current_part2{
+    margin-top: 20px;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 100px;
+    font-size: 30px;
+    background-color:#DDDDDD;
+    width:220px;
+    height:100px;
+    border-radius:3%;
+}
+.modal1{
+    display: flex;
+    flex-direction: row;
+}
+.problem{
+    width: 1000px;
+    height: 340px;
+    position: absolute;
+    left: 30%;
+}
+.problem_part1{
+    display: flex;
+    justify-content:space-around;
+}
+.problem_part1 span{
+    color: #999999;
+}
+.problem_part1 p{
+    font-size: 18px;
+}
+.problem_part1 div {
+    text-align: center;
+    width: 220px;
+    height: 70px;
+    border-radius: 8%;
+    background-color: #F8F8F8;
+}
+.current_part1_text{
+    width: 556px;
+    height: 230px;
+    position: absolute;
+    margin-left: 481px;
+    margin-top: 8%;
+}
+.current_part2_text{
+    width: 556px;
+    height: 230px;
+    position: absolute;
+    margin-left: 481px;
+    margin-top: 8%;
+}
+.current_part1_part1{
+    position: absolute;
+    margin-top: 40px;
+    display: flex;
+    justify-content:space-around;
+}
+.current_part2_part2{
+    position: absolute;
+    margin-top: 40px;
+    display: flex;
+    justify-content:space-around;
+}
+.current_part1_image{
+    margin-left: 65px;
+}
+.current_part2_image{
+    margin-left: 65px;
+}
+.problem_index1_page2{
+    display: none;
+}
+.problem_index1_page3{
+    display: none;
+}
+.problem_index1{
+    display:block;
+}
+.problem_index2{
+    display:none;
+}
+#welfare{
+    position: absolute;
+    top: 140%;
+    width: 100%;
+    height: 394px;
+    background-color:#F8F8F8;
+    z-index: 999;
+}
+.welfare_index1{
+    margin-top: 3%;
+    text-align: center;
+}
+.welfare_index2{
+    display: flex;
+    justify-content:space-around;
+}
+.welfare_index2_part1,.welfare_index2_part2,.welfare_index2_part3{
+    width: 300px;
+    height: 180px;
+    background-color: #FFFFFF;
+    font-size: 24px;
+}
+.welfare_index2_part1 span,.welfare_index2_part2 span,.welfare_index2_part3 span{
+color: #CCCCCC;
+}
+.welfare_index2_part1 img{
+position: absolute;
+    left: 16%;
+    top: 43%;
+}
+.welfare_index2_part2 img{
+    position: absolute;
+    left: 51%;
+    top: 43%;
+}
+.welfare_index2_part3 img{
+    position: absolute;
+    left: 86%;
+    top: 43%;
+}
+.welfare_index2_part1_div1,.welfare_index2_part1_div2,.welfare_index2_part1_div3{
+    padding-left: 44px;
+    line-height: 180px;
+}
+.welfare_index2_part1_div1 h3,.welfare_index2_part1_div2 h3,.welfare_index2_part1_div3 h3{
+    position: absolute;
+    margin-top: 44px;
+}
+.subscribe_index1{
+    margin-top: 3%;
+    text-align: center;
+}
+.subscribe{
+    position: absolute;
+    top: 181%;
+    width: 100%;
+    height: 394px;
+    background-color:#FFFFFF;
+    z-index: 999;
+}
+.subscribe_index2{
+    display: flex;
+    justify-content: space-around;
+}
+.subscribe_index2 p{
+    text-align: center;
+    font-size: 20px;
+}
+.subscribe_index2 span{
+    position: absolute;
+    top: 125px;
+    font-size: 90px;
+}
+#container{
+    position: absolute;
+    top: 230%;
+    left: 153px;
+    height: 800px;
+    width: 1600px;
+    border-radius: 0%;
+}
+.map_text{
+    position: absolute;
+    top: 222%;
+    left: 42%;
+}
+.Show_business{
+    position: absolute;
+    height: 1008px;
+    top: 317%;
+    text-align: center;
+    width: 100%;
+    background-color: #F8F8F8;
+}
+.Show_business_index2{
+background-color: white;
+    width: 1000px;
+    height: 300px;
+    margin: 120px auto;
+    text-align: center;
+}
+.Show_business_index2 img{
+    margin-left: -82%;
+    margin-top: -62px;
+    width: 400px;
+    height: 300px;
+}
+.Show_business_text{
+    margin-left: 42%;
+    margin-top: -22%;
+    width: 500px;
+    height: 300px;
+}
+.Show_business_text p,.Show_business_text h3,.Show_business_text button{
+    color: #333333;
+    text-align: left;
+}
+.Show_business_btn{
+    background-color: transparent;
+    line-height: 40px;
+    width: 140px;
+    height: 40px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.Show_business_index3{
+    background-color: white;
+    width: 1000px;
+    height: 300px;
+    margin: 120px auto;
+    text-align: center;
+}
+.Show_business_index3 img{
+    margin-left: 59%;
+    margin-top: 60px;
+    width: 400px;
+    height: 300px;
+}
+.Show_business_text2{
+    margin-left: 25%;
+    margin-top: -21%;
+    width: 500px;
+    height: 300px;
+}
+.Show_business_text2 p,.Show_business_text2 h3,.Show_business_text2 button{
+    color: #333333;
+    text-align: left;
+}
+.Show_business_btn2{
+    background-color: transparent;
+    line-height: 40px;
+    width: 140px;
+    height: 40px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 5px;
+}

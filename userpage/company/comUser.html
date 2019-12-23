@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>企业个人中心</title>
+	<style type="text/css" media="screen">
+		 /* 全部css样式*/
+		 *{
+		 	margin : 0;
+		 	padding: 0;
+		 }
+		 body{
+			background-color: rgba(205, 225, 112, 0.22);
+		 }
+		@font-face
+		{
+			font-family: myFirstFont;
+			src: url('../../Font/Deng.ttf');
+		}
+		@font-face
+		{
+			font-family: myLogoFont;
+			src: url('../../Font/FZSTK.TTF');
+		}
+		/* 头部css */
+		#heard{
+			width: 90%;
+			height: 6vh;
+			margin: 4vh auto;
+			border: 1px solid orange;
+			text-align: center;
+			color: orange;
+			line-height: 6vh;
+			font-family: myLogoFont;
+			border-radius: 15px;
+			background-color: rgba(255, 255, 255, 0.2);
+		}
+		/* 类型按钮 */
+		#upcom {
+			width: 90%;
+			height: 5vh;
+			margin: 0 auto;
+			margin-bottom: 3vh;
+			border: 1px solid orange;
+			display: flex;
+			justify-content: space-between;
+			border-radius: 15px;
+			line-height: 5vh;
+			font-family: myFirstFont;
+			background-color: rgba(255,255,255,0.2);
+			color: orange;
+		}
+		#upcom button{
+			width: 10%;
+			height:4vh;
+			margin: 0.5vh 2vh;
+			border-radius: 10px;
+			border-style: none;
+			color: #F5F5F5;
+			
+		}
+		/* 信息部分 */
+		#message{
+			width: 80%;
+			height: 20vh;
+			margin: 5vh auto;
+			border : 1px solid orange;
+			display: flex;
+			justify-content: space-around;
+			font-family: myFirstFont;
+			background-color: rgba(255, 255, 255, 0.1);
+			border-radius: 15px;
+		}
+		#message h2{
+			color:rgb(255, 165, 0);
+		}
+		#message .name,#message .love{
+			width: 25%;
+			height: 16vh;
+			line-height: 6vh;
+			text-align: center;
+			margin-top: 2vh;
+		}
+		#message .name #com_name{
+			font-family: myLogoFont;
+			color: rgba(255, 165, 0,0.8);
+			font-size: 30px;
+		}
+		#message .content{
+			width: 40%;
+			height: 18vh;
+			line-height: 5vh;
+			text-align: center;
+			margin-top: 1vh;
+		}
+		#message .content i{
+			color:rgba(255, 165, 0,0.9);
+		}
+		#message .love{
+			border-radius: 15px;
+			border: 1px solid rgba(255, 165, 0,0.5);
+			font-family: myLogoFont;
+		}
+		#message .love #com_love{
+			color:rgba(255, 12, 12, 0.81);
+			font-size: 30px;
+		}
+		/* 项目内容 */
+		#project{
+			width: 90%;
+			min-height: 58vh;
+			margin: 0 auto;
+			display: flex;
+			justify-content: space-around;
+		}
+		#project #pro_state{
+			width: 10%;
+			height: 55vh;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			margin-top:2vh ;
+			border-radius: 15px;
+			background-color: rgba(255, 255, 255, 0.3);
+		}
+		#project #pro_state div{
+			border: 1px solid rgba(255, 165, 0,0.5);
+			width: 80%;
+			height: 10vh;
+			line-height: 10vh;
+			text-align: center;
+			margin: 0 auto;
+			border-radius: 10px;
+			color: orange;
+		}
+		#project #pro_state div:hover{
+
+			box-shadow: 2px 2px 5px rgba(255, 165, 0,0.5);
+		}
+		#project #bri_content{
+			width: 50%;
+			min-height: 58vh;
+			max-height: 80vh;
+			overflow: auto;
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			border-radius: 15px;
+			background-color: rgba(255, 255, 255, 0.2);
+		}
+			/* 滑动条样式 */
+		#project #bri_content::-webkit-scrollbar {
+		  width: 3px;
+		}
+		#project #bri_content::-webkit-scrollbar-thumb {
+		  background-color: orange;
+		  border-radius: 25px;
+		  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
+		}
+		#project #bri_content #bri_con_side{
+			width: 90%;
+			height: 20vh;
+			border: 1px solid rgba(255, 165, 0,0.5);
+			display: flex;
+			justify-content: space-around;
+			margin: 2vh;
+			border-radius: 10px;
+		}
+		#project #bri_content #bri_con_side:hover{
+			box-shadow: 2px 2px 5px rgba(255, 165, 0,0.5);
+		}
+		#project #bri_content #bri_con_side .bri_img{
+			width: 30%;
+			height: 18vh;
+			margin-top: 1vh;
+		}
+		#project #bri_content #bri_con_side .bri_con{
+			width: 65%;
+			height: 18vh;
+			margin-top: 1vh;
+		}
+		#project #bri_content #bri_con_side .bri_con h2{
+			color: rgba(255, 165, 0,0.7);
+		}
+		#project #bri_content #bri_con_side .bri_con h2:hover{
+			color: rgb(255, 165, 0);
+		}
+		/* 用户申请 */
+		#project #user{
+			width: 35%;
+			min-height: 58vh;
+			border-radius: 15px;
+			background-color: rgba(255, 255, 255, 0.1);
+		}
+		#project #user .user_state{
+			width: 90%;
+			min-height:55vh;
+			border-radius: 15px;
+			margin: 2vh auto;
+			background-color: rgba(255, 255, 255, 0.3);
+		}
+		#project #user .user_state .user_pro{
+			width: 90%;
+			height: 4vh;
+			margin: 1vh auto;
+			display: flex;
+			justify-content: space-around;
+			border-bottom: 2px dotted orange;
+			color: rgba(255, 165, 0,0.5);
+		}
+		#project #user .user_state .user_pro h3:hover{
+			border-top: 2px solid rgb(255, 165, 0);
+		}
+		#project #user .user_state #user_side{
+			width: 90%;
+			height: 6vh;
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			margin: 1vh auto;
+			line-height: 6vh;
+			text-align: center;
+			border-radius: 6px;
+			background-color: rgba(255, 255, 255, 0.2);
+		}
+		#user_side:hover{
+			box-shadow: 1px 1px 4px rgba(255, 165, 0,0.3);
+		}
+		#user_side .user_name{
+			width: 40%;
+		}
+		#user_side .user_name h3{
+			color: rgba(255, 165, 0,0.7)
+		}
+		#user_side .user_name h3:hover{
+			color: rgb(255, 165, 0)
+		}
+		#user_side .user_bth{
+			width: 55%;
+		}
+		#user_side .user_bth button{
+			width: 25%;
+			height: 4vh;
+			border-style: none;
+			color: #f5f5f5;
+			border-radius: 5px;
+			margin-left: 1vh;
+		}
+		#user_side .user_bth .user_path{
+			background-color: rgba(0, 180, 0, 0.5);
+		}
+		#user_side .user_bth .user_turn{
+			background-color: rgba(180, 0, 0, 0.5);
+		}
+	</style>
+</head>
+<body>
+	<!-- 头部 -->
+	<div id="heard">
+		<h1>自然之友·企业中心</h1>
+	</div>
+	<!-- 企业信息块 -->
+	<div id="message">
+		<div class="name">
+			<h2>企业名称</h1>
+			<p id="com_name"></p>
+		</div>
+ 		<div class="content">
+			<h2>联系方式</h2>
+			<p>电话:&nbsp;<i id="com_phone"></i></p>
+			<p>邮箱:&nbsp;<i id="com_email"></i></p>		
+ 		</div>
+ 		<div class="love">
+ 			<h2>爱心值</h2>
+ 			<p id="com_love"></p>
+ 		</div>
+	</div>
+	<!-- 按钮操作 -->
+	<div id="upcom">
+		<button type="button" id="up_com_btn" style="background-color: rgba(19, 101, 251, 0.5);">发布项目</button>
+		<h2>项目具体展示</h2>
+		<button type="button" id="exit_com_btn" style="background-color: rgba(195,0,0,0.5);">退出账户</button>
+	</div>
+	<!-- 项目信息页面 -->
+	<div id="project">
+		<!-- 项目状态 -->
+		<div id="pro_state">
+			<!-- 类型选择 -->
+			<div id="true" style="background-color:rgba(255, 165, 0,0.3);">
+				<p>通过审批<p>
+			</div>
+			<div id="know">
+				<p>正在审批<p>
+			</div>
+			<div id="no">
+				<p>拒绝审批<p>
+			</div>
+		</div>
+		<!-- 项目内容 -->
+		<div id="bri_content"></div>
+		<!-- 申请人数 -->
+		<div id="user">
+			<div class="user_state">
+				<div class="user_pro">
+					<h3 id="appli">申请</h3>
+					<h3 id="appli_true">通过</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 尾部 -->
+	<div id="footer" style="color: orange;text-align: center;font-family: myLogoFont; margin-top: 2vh;margin-bottom: 2vh;">
+			<h1>自然之友·企业中心</h1>
+	</div>
+
+	<script src="../../comment_js/func.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../comment_js/jquery-3.4.1.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		//jquery代码
+		$(function(){
+			// 设置属性
+			var bri_state = 1;
+			var pro_id = null;//项目id
+			var com_id;//获取企业id
+			var result;//用户
+			var win = search();
+			if (win.com_id == null) {
+				if (sessionStorage.getItem('com_id') == null) {
+					alert('数据请求失败.');
+					return;
+				}else{
+					com_id = sessionStorage.getItem('com_id');
+				}
+			} else{
+				if(win.com_id != sessionStorage.getItem('com_id')){
+					//把不需要的内容隐藏点
+					$('#upcom').hide();
+					$('#project #pro_state').hide();
+					$('#project #user').hide();
+					$('#project #bri_content').css('width', '90%');
+				}
+				com_id = win.com_id;
+			}
+			//获取内容信息
+			comContent(com_id);
+			proSum(com_id,bri_state);//初始化数据
+			//添加类型动画
+			$('#project #pro_state div').click(function(event) {
+				//设置让是属性
+				$(this).css('backgroundColor', 'rgba(255, 165, 0,0.3)');
+				$(this).siblings().css('backgroundColor', '');
+				//判断属性
+				var sort = $(this).attr('id');
+					if (sort == 'true') {
+						bri_state = 1;
+					}else if (sort == 'know'){
+						bri_state = 0;
+					}else if (sort == 'no') {
+						bri_state = 2;
+					}
+				//设置人数申请条件
+				if (bri_state != 1) {
+					$('#project #user .user_state #user_side').remove();
+					$('#project #user .user_state').append("<div id='user_side' style='color:orange'>没有该选项!</div>");
+				}else{
+					$('#project #user .user_state #user_side').remove();
+				}
+				//设置按钮
+				$('#project #user .user_state .user_pro h3').css('color', 'rgba(255, 165, 0,0.5)');
+				//调取后台数据
+				proSum(com_id,bri_state);
+				pro_id = null;//初始化数据
+			});
+			//添加标题跳转事件
+			$('#project #bri_content').on('click','#bri_con_side .bri_con h2',function(event) {
+				var id =  $(this).attr('id');
+				window.location.assign('../../Content/educContent.html?id='+id);
+			});
+			//添加给项目内容添加查询人数申请状态
+			$('#project #bri_content').on('click', '#bri_con_side', function(event) {
+				//获取必要数据
+				if (bri_state != 1) {
+					$('#project #user .user_state #user_side').remove();
+					$('#project #user .user_state').append("<div id='user_side' style='color:orange'>请选择通过审核的项目!</div>");
+					return;
+				}
+				//获取必要数据
+				pro_id = $(this).attr('class');
+				//设置按钮
+				$('#project #user .user_state .user_pro #appli_true').css('color', 'rgba(255, 165, 0,0.5)');
+				$('#project #user .user_state .user_pro #appli').css('color', 'rgb(255, 165, 0)');
+				//调用人数情况
+				userState(pro_id,0);
+			});
+			//设置申请和通过的按钮
+			$('#project #user .user_state .user_pro h3').click(function(event) {
+				//判断是否有效
+				if (bri_state != 1) {
+					alert('请选择通过审核的项目');
+					return;
+				}else if (pro_id == null){
+					alert('请选择项目!');
+					return;
+				}
+				//设置样式
+				$(this).siblings().css('color', 'rgba(255, 165, 0,0.5)');
+				$(this).css('color', 'rgb(255, 165, 0)');
+				//获取数据
+				var sort = $(this).attr('id');
+					if (sort == 'appli') {
+						var user_state = 0;
+					}else if (sort == 'appli_true') {
+						var user_state = 1;
+					}
+				//调用后台数据
+				userState(pro_id,user_state);
+			});
+			//设置通过和未通过
+			$('#user').on('click', '#user_side .user_bth button', function(event) {
+				var text = $(this).text();
+				// 设置点击后样式
+				$(this).text('等待');
+				$(this).attr('disabled',true);
+				$(this).siblings().attr('disabled', true);
+				//判断属性
+				var sort = $(this).attr('class');
+					if (sort == 'user_path') {
+						var user_state = 1;
+					}else if (sort == 'user_turn') {
+						var user_state = 2;
+					}
+				//获取重要数据
+				var dom = $(this);
+				var u_id = $(this).attr('id');
+				var title = $("#bri_content #"+pro_id).text();
+				//请求后台
+				$.ajax({
+					url: '../../php/usePost.php',
+					type: 'POST',
+					data: {
+						direction: 'comUser',
+						u_id : u_id,
+						pro_id : pro_id,
+						user_state : user_state
+					},
+					success : function(e){
+						if (e == 1){
+							$(dom).text('已通过');
+
+							emailUp(u_id, title, user_state);
+						}else{
+							alert('审批失败,请请重新审批。');
+							$(dom).text(text);
+							$(dom).attr('disabled',false);
+							$(dom).siblings().attr('disabled',false);
+						}	
+					}
+				})			
+			});
+			// 设置点击调到个人中心
+			$('#project #user .user_state') .on('click','#user_side .user_name h3',function(){
+				//调到个人中心
+				var u_id = $(this).attr('id');
+				window.location.assign("../usercom/enterprise.html?u_id="+u_id);
+			});
+			//添加发布项目功能
+			$('#upcom #up_com_btn').click(function(){
+				//设置跳转地址
+				window.location.assign('../../Content/upContent.html');
+			})
+			//退出账号登录
+			$('#upcom #exit_com_btn').click(function(){
+				//把session属性清除掉
+				sessionStorage.removeItem('com_id');
+				//再次判断
+				if(sessionStorage.getItem('com_id') == null){
+					//跳转地址
+					alert('成功成功,将要跳回主页。');
+					window.location.replace('../../index.html');
+				}else{
+					alert('退出失败,请重新操作.')
+					window.location.assign('comUser.html');
+				}
+			})
+			
+		})
+
+		/**
+		 * 获取企业项目
+		 * @param  {[type]} com_id      [description]
+		 * @param  {[type]} bri_state [description]
+		 * @return {[type]}           [description]
+		 */
+		function proSum(com_id,bri_state){
+			$('#bri_content').empty();//初始化展示页面
+			//调取后台数据
+			$.ajax({
+				url: '../../php/demo.php',
+				type: 'GET',
+				data: {
+					direction: 'comPro',
+					com_id : com_id,
+					bri_state : bri_state 
+				},
+				success : function(e){
+					if (e != '[]') {
+						//转化数据
+						var data = $.parseJSON(e);
+						$.each(data, function(index, val) {
+							 var html = "<div id='bri_con_side' class="+val.id+"><div class='bri_img'><img src='../../updata/"+val.bri_img+"' width='100%' height='100%'></div><div class='bri_con'><h2 id="+val.id+">"+val.bri_title+"</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;"+val.bri_content+"</p></div></div>";
+							 $('#bri_content').prepend(html);
+						});
+					}else if (e == '[]') {
+						$('#bri_content').append("<div style='color:orange;font-size:30px; margin-top:3vh;'>目前还没有项目.<div>");
+					}else{
+						alert('请求失败.');
+					}
+				}
+			})
+		}
+		/**
+		 * 获取项目的申请人数
+		 * @param  {[type]} pro_id [description]
+		 * @return {[type]}        [description]
+		 */
+		function userState(pro_id,user_state){
+			//设置接收过来的数据
+			$('#project #user .user_state #user_side').remove();//初始化数据
+			//向后台请求数据
+			$.ajax({
+				url: '../../php/demo.php',
+				type: 'GET',
+				data: {
+					direction: 'userState',
+					pro_id : pro_id,
+					user_state : user_state
+				},
+				success : function(e){
+					if (e != '[]') {
+						$('#project #user .user_state #user_side').remove();//初始化数据
+						//转化json格式
+						var data = $.parseJSON(e);
+						//循环操作
+						$.each(data, function(index, val) {
+							if(user_state == 0){
+								var html = "<div id='user_side'><div class='user_name'><h3 id="+val.id+">"+val.user+"</h3></div><div class='user_bth'><button type='button' class='user_path' id="+val.id+">通过</button><button type='button' class='user_turn' id="+val.id+">拒绝</button></div></div>";
+							}else if(user_state == 1){
+								var html = "<div id='user_side'><div class='user_name'><h3 id = "+val.id+">"+val.user+"</h3></div></div>";
+							}
+							$('#project #user .user_state').append(html);
+						});
+					}else if(e == '[]'){
+						$('#project #user .user_state #user_side').remove();//初始化数据
+						//设置样式
+						$('#project #user .user_state').append("<div id='user_side' style='color:orange;'>该项目目前还没有数据!</div>");
+					}else{
+						alert('数据请求失败!');
+					}
+				}
+			})
+		}
+		/**
+		 * 发送邮箱功能
+		 * @param  {[type]} u_id        [用户]
+		 * @param  {[type]} title     [项目主题]
+		 * @param  {[type]} user_state [申请状态]
+		 * @return {[type]}           
+		 */
+		function emailUp(u_id,title,user_state){
+			//获取邮箱连接
+			$.ajax({
+				url: '../../php/email.php',
+				type: 'POST',
+				data: {
+					direction: 'compy',
+					u_id : u_id,
+					title : title,
+					user_state : user_state
+				},
+				success : function(e){
+					if (e) {
+						console.log('邮箱发送成功.');
+					} else{
+						console.log('邮箱发送失败.');
+					}
+				}
+			})
+		}
+		/**
+		 * 获取企业个人信息
+		 */
+		function comContent(com_id){
+			//调用后台
+			$.ajax({
+				url : '../../php/demo.php',
+				type : 'get',
+				data : {
+					direction : 'comContent',
+					id : com_id
+				},
+				success : function(e){
+					if (e != '[]') {
+						//转化数据
+						var data = $.parseJSON(e);
+						//把内容赋值
+						$('#message #com_name').text(data[0].user);
+						$('#message #com_email').text(data[0].email);
+						$('#message #com_phone').text(data[0].phone);
+						$('#message #com_love').text(data[0].love);
+					} else if(e == '[]'){
+						alert('数据请求失败,即将跳回主页!');
+						window.location.replace("../../index.html");
+					}
+				}
+			});
+		}
+
+	</script>
+</body>
+</html>

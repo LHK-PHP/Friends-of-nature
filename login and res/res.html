@@ -1,0 +1,129 @@
+<html>
+	<head>
+		<title>注册</title>
+		<meta charset="UTF-8"/>
+		<link rel="stylesheet" type="text/css" href="css/log.css"/>
+	</head>
+	
+	<body>
+		<div class ="logo">
+		
+		</div>
+		<div class="log">
+			<div class="header">
+				志愿者注册
+			</div>
+			
+			<form name="form" method="post">
+				
+			<div class="user">
+				用户名:<input type="" name="" id="user" />
+			</div>
+			<div class="email">
+				邮&nbsp;&nbsp;&nbsp;箱:<input type="" name="" id="email" />
+			</div>
+			<div class="password">
+				密&nbsp;&nbsp;&nbsp;码:<input type="password" name="" id="password"/>
+			</div>
+			<div class="phone">
+				手机号:<input type="" name="" id="phone" />
+			</div> 
+			
+			</form>
+			
+			<div class="warning"></div>
+			<div class="warning-two"></div>
+			<div class="warning-three"></div>
+			<div class="warning-four"></div>
+			
+			<div class="button">
+				<button id="a1">立即注册</button>
+			</div>
+		</div>	
+		
+		
+		<script src="../comment_js/jquery-3.4.1.js" type="text/javascript" charset="UTF-8"></script>
+		<script type="text/javascript">
+			
+		
+	$(function(){
+	//定义正则表达式来验证密码
+	var pattern = /^(?![\d]+$)(?![a-zA-Z]+$)(?![^\da-zA-Z]+$).{6,20}$/;
+	//手机号正则格式
+	var phoneReg = /^1[345789]\d{9}$/;
+	$('#a1').click(function(){
+		var user = document.getElementById('user').value;
+		var email = document.getElementById('email').value;
+		var pass = document.getElementById('password').value;
+		var phone = document.getElementById('phone').value;
+		//判断input框里的值是否满足要求
+		if(user==""){
+			$('.warning').empty();
+			$('.warning').append("用户名不能为空");
+			return;
+		}else {
+			$('.warning').empty();
+		}
+		
+		if(email==""){
+			$('.warning-two').empty();
+			$('.warning-two').append("验证码不能为空");
+			return;
+		}else {
+			$('.warning-two').empty();
+		}
+		
+		if(pass==""){
+			$('.warning-three').empty();
+			$('.warning-three').append("密码不能为空");
+			return;
+		}else {
+			$('.warning-three').empty();
+		}
+		
+		if(phone==""){
+			$('.warning-four').empty();
+			$('.warning-four').append("手机号不能为空");
+			return;
+		}else{
+			$('.warning-four').empty();
+		}
+		
+		 if(!pattern.test(pass)){
+			$('.warning-three').empty();
+			$('.warning-three').append("请输入正确的密码格式");
+			return;
+		}else{
+			$('.warning-three').empty();
+		}
+		
+		if(!phoneReg.test(phone)){
+			$('.warning-four').empty();
+			$('.warning-four').append("请输入正确的手机号");
+			return;
+		}else{
+			$('.warning-four').empty();
+		}	
+		$.ajax({
+		 url : 'php/res.php',
+		 type : 'post',
+		 data:{'user':user,'passwd':pass,'phone':phone,'email':email},
+		 success : function(res){
+			 
+			 if(res == 1){
+			window.history.back();
+			}else{
+				alert('注册失败.');
+			}
+		 }
+	})
+		
+		
+	})
+})
+
+				
+		</script>
+	</body>
+</html>
+

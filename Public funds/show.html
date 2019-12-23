@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="../jquery/jquery-3.4.1.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/show.css">
+<style type="text/css">
+     /*头部*/
+        #header{
+            width: 100%;
+            height: 60px;
+            color: paleturquoise;
+            position: relative;
+            font-family: "宋体";
+            background-color: azure;
+        }
+        .logo img{
+            width: 100px;
+            height: 60px;
+            top: 0px;
+            left: -17px;
+            position: absolute;
+            
+        }
+        .header-a{
+            width: 50%;
+            height: 40px;
+            top: 10px;
+            left:35%;
+            font-size: 20px;
+            position: absolute;
+           text-align: center;
+           margin: 0 auto;
+           
+        }
+      .phone{
+            position: absolute;
+            top: 5px;
+            right:-85px;
+            float: right;
+            width: 150px;
+            height: 30px;
+            color: white;
+            background-color: #91ca06;
+     border-radius: 10px;
+            line-height: 30px;
+      }
+      /* 尾部 */
+          #div1{
+                height: 20vh;
+                background-image: url(../homeImg/456.png);
+                text-align: center;
+                line-height: 4vh;
+            }
+            #div1 p{
+                font-size: 12px;
+                color: #686868;
+            }
+</style>
+</head>
+<body>
+    <!-- 头部 -->
+    <div id="header">
+    <div class="logo">
+        <a href="contribute.html"><img src="../homeImg/logo.png"/></a>
+    </div>
+    <div class="header-a">
+        <div class="bs-example">
+            <ul class="nav nav-pills" role="tablist">
+                <li role="presentation" class="activ"><a href="../index.html">首页</a></li>&nbsp;
+                <li role="presentation" class="dropdown">
+                    <a id="drop4" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        项目列表
+                        <span class="caret"></span>
+                    </a>&nbsp;
+                    <ul id="menu1" class="dropdown-menu" aria-labelledby="drop4">
+                        <li><a href="show.html">公益资金</a></li>
+                        <li><a href="../clothes%20recycling/show.html">爱心捐衣</a></li>
+                        <li><a href="../project/environment/index.html">保护环境</a></li>
+                        <li><a href="../project/education/index.html">义务支教</a></li>
+                        <li><a href="../project/garbage/xiangmu.html">垃圾分类</a></li>
+                    </ul>
+                </li>
+                <li role="presentation" class="dropdown">
+                    <a id="drop5" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        加入我们
+                        <span class="caret"></span>
+                    </a>&nbsp;
+                    <ul id="menu2" class="dropdown-menu" aria-labelledby="drop5">
+                        <li><a id="company" onclick="alert('欢迎你的加入,具体请联系QQ:1649681210')">申请企业账户</a></li>
+                    </ul>
+                </li>
+                <li role="presentation" class="dropdown">
+                    <a id="drop6" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        登录
+                        <span class="caret"></span>
+                    </a>&nbsp;
+                    <ul id="menu3" class="dropdown-menu" aria-labelledby="drop6">
+                        <li id="login"><a>登录</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="phone">
+            <img class="phone1" src="../homeImg/phone.png"/>
+            <span class="">400-260-0852</span>
+        </div>
+    </div>
+</div>
+
+
+<!--轮播-->
+<div id="demo" class="carousel slide" data-ride="carousel">
+    <!-- 指示符 -->
+    <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+        <li data-target="#demo" data-slide-to="2"></li>
+    </ul>
+    <!-- 轮播图片 -->
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <a href="clothes_btn.html"><img src="../image/china.jpg"></a>
+        </div>
+        <div class="carousel-item">
+            <a href="clothes_btn.html"><img src="../image/juan1.jpg"></a>
+        </div>
+        <div class="carousel-item">
+            <a href="clothes_btn.html"><img src="../image/juan2.jpg"></a>
+        </div>
+    </div>
+    <!-- 左右切换按钮 -->
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </a>
+</div>
+<!--主题内容-->
+<div class="theme">
+    <div class="context">
+    <div class="context_header22" style="display: flex;flex-direction: row;justify-content: space-between;width: 750px;height: 35px;z-index: 9999;"><div style="height: 35px;">-机构新闻</div><div class="right" style="height: 35px;">MORE</div></div>
+        <div class="context_header"></div>
+
+<!--    <div style="display: flex;flex-direction: row;justify-content: space-between;"><div style="height: 200px;width: 286px;"><img src="../image/poor.jpg" alt=""></div><div style="height: 200px;width: 480px;"><br><h4>“逆风飞翔·事实孤儿同行计划”湖南省规模化推广项目</h4><br><br><br><p class="context_time">发布时间:2019-08-26</p></div></div>-->
+<!--    <div style="display: flex;flex-direction: row;justify-content: space-between;"><div style="height: 200px;width: 286px;"><img src="../image/poor.jpg" alt=""></div><div style="height: 200px;width: 480px;"><br><h4>“逆风飞翔·事实孤儿同行计划”湖南省规模化推广项目</h4>-->
+<!--        <br><br><br><p class="context_time">发布时间:2019-08-26</p></div></div>-->
+<!--    <div style="display: flex;flex-direction: row;justify-content: space-between;"><div style="height: 200px;width: 286px;"><img src="../image/poor.jpg" alt=""></div><div style="height: 200px;width: 480px;"><br><h4>“逆风飞翔·事实孤儿同行计划”湖南省规模化推广项目</h4>-->
+<!--        <br><br><br><p class="context_time">发布时间:2019-08-26</p></div></div>-->
+<!--    <div style="display: flex;flex-direction: row;justify-content: space-between;"><div style="height: 200px;width: 286px;"><img src="../image/poor.jpg" alt=""></div><div style="height: 200px;width: 480px;"><br><h4>“逆风飞翔·事实孤儿同行计划”湖南省规模化推广项目</h4>-->
+<!--        <br><br><br><p class="context_time">发布时间:2019-08-26</p></div></div>-->
+<!--    <div style="display: flex;flex-direction: row;justify-content: space-between;"><div style="height: 200px;width: 286px;"><img src="../image/poor.jpg" alt=""></div><div style="height: 200px;width: 480px;"><br><h4>“逆风飞翔·事实孤儿同行计划”湖南省规模化推广项目</h4>-->
+<!--        <br><br><br><p class="context_time">发布时间:2019-08-26</p></div></div>-->
+<!--    <div style="display: flex;flex-direction: row;justify-content: space-between;"><div style="height: 200px;width: 286px;"><img src="../image/poor.jpg" alt=""></div><div style="height: 200px;width: 480px;"><br><h4>“逆风飞翔·事实孤儿同行计划”湖南省规模化推广项目</h4>-->
+<!--        <br><br><br><p class="context_time">发布时间:2019-08-26</p></div></div>-->
+<!--    <div style="display: flex;flex-direction: row;justify-content: space-between;"><div style="height: 200px;width: 286px;"><img src="../image/poor.jpg" alt=""></div><div style="height: 200px;width: 480px;"><br><h4>“逆风飞翔·事实孤儿同行计划”湖南省规模化推广项目</h4>-->
+<!--        <br><br><br><p class="context_time">发布时间:2019-08-26</p></div></div>-->
+</div>
+    <div>
+        <div class="right"><!--展示公益资金总额和捐款人数(如果处于登录状态可展示捐款按钮,点击捐款按可以选择项目进行捐款)
+	-->
+   <div id="money" >
+                <div class="date">
+                    <h5>截止到</h5>
+                    <span class="n"></span>年
+                    <span class="y"></span>月
+                    <span class="t"></span>日
+                </div>
+                <dl>
+                    <dt>善款总额:</dt><br />
+                    <dd>
+                        <span class="money1">526971</span>元
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>爱心总人数:</dt><br />
+                    <dd>
+                        <span class="people1">356315</span>人
+                    </dd>
+                </dl>
+                <div class="btn">
+                    <input type="button" name="btn" id="btn" value="详情" onclick="a()" >
+                    <br>
+                    <button class="btn2">刷新</button>
+                </div>
+            </div></div>
+        <div class="right_bottom">
+            <div class="right_bottom_l1" style="height:131px"><span>-捐赠查询</span><br><input
+                    type="text" placeholder="请输入查询姓名和编号"><img src="../image/index_query.jpg" alt=""></div>
+            <div class="right_bottom_l2"><span>-益百科</span><img src="../image/baby.jpg" alt=""></div>
+            <div class="right_bottom_l3"><span>-益人物</span><img src="../image/old.jpg" alt=""></div>
+            <div class="right_bottom_l4"><span>-益事件</span><img src="../image/people.jpg" alt=""></div>
+            <div class="right_bottom_l4"><span>-益存在</span><img src="../image/exist.jpg" alt=""></div>
+        </div>
+    </div>
+</div>
+<!-- 尾部 -->
+<div id="div1">
+    <p class="db">© 2013-2019 zrzy.com &emsp;&emsp;&emsp;&emsp;&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;版权所有 ICP证：京ICP备14000186号-10</p>
+    <p class="db"><img src="../homeImg/ZQQ5OB3U}~J@T6}9PV@YWCW.png"/>京公网安备11010102002019&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;建议使用1024*768以上分辨率浏览</p>
+    <p class="db">互联网违法和不良信息举报中心:0571-81683755&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;blxx@list.alibaba-inc.com</p>
+
+</div>
+</body>
+<!--金额与人数显示-->
+<script>
+    function a(){
+        window.open("contribute.html")
+    }
+    $(document).ready(function(){
+        var date = new Date();
+        var n = date.getFullYear();
+        var y = date.getMonth()+1;
+        var t = date.getDate();
+        $('.n').html(n);
+        $('.y').html(y);
+        $('.t').html(t);
+    });
+    // 点击触发事件
+    $(".btn2").click(function(event) {
+        //获取值
+        var num = $(".money1").text();
+        var people = $(".people1").text();
+        var number = 10;
+        // 调用计时函数
+        var time = setInterval(function () {
+            if (number>0){
+                number--;
+                num++;
+                people++;
+                $(".money1").text(num);
+                $(".people1").text(people);
+            }
+       },1000);
+    });
+    $('#menu3 #login').click(function(event) {
+        if (sessionStorage.getItem('u_id') != null | sessionStorage.getItem('com_id') != null |sessionStorage.getItem('admin_id') != null ) {
+            alert('已经登录,无需在登录!');
+        }else{
+            window.location.assign('../login and res/login.html');
+        }
+    });
+</script>
+<script>
+    var arr;
+    $.ajax({
+        type:'get',
+        url:"select_text.php",
+        success:function (res) {
+            console.log(res);
+            var stu = $.parseJSON(res);
+            arr=stu;
+            console.log(arr);
+            $.each(stu, function (index, value) {
+                for (let i = 0; i < 1; i++) {
+                    // console.log(value.bri_img);
+                    $(".context").css("height", 220 * index + 280 + "px")
+                    var text = "<div class='show_context'style=' margin-top:2vh;display: flex;flex-direction: row;'><img style='width: 400px;height: 200px;color: red' src=" + "../updata/" + stu[index].bri_img + " ><h2 style='line-height:200px;margin-left:5vh;'>" + stu[index].bri_title + "</h2></div>";
+                    $(text).insertBefore('.context_header');       
+                }
+            })
+        }
+    })
+    
+    
+    //进入div操作
+    $('body').on('mouseover', '.show_context', function (){
+        var index1 = $(".show_context").index(this);    
+        var html =  arr[index1].bri_content;
+        id = arr[index1].id;
+        $(".show_context").eq(index1).html(html).css({
+        "text-align": "center",
+        "line-height": "200px",
+        "backgroundColor": "rgba(249, 208, 190, 0.28)",
+        "justify-content" : 'space-around'
+        });
+    })
+	//移出div操作
+    $('body').on('mouseout', '.show_context', function () {
+        var index1 = $(".show_context").index(this);
+        $(".show_context").eq(index1).replaceWith("<div class='show_context' style='margin-top:2vh;display: flex;flex-direction: row;'><img style='width: 400px;height: 200px;color: red' src=" + "../updata/" +arr[index1].bri_img+ " ><h2 style='line-height:200px;margin-left:5vh;'>" + arr[index1].bri_title + "</h2></div>");
+    })
+    
+    //点击div跳转页面
+     $('body').on('click', '.show_context', function (){
+      //设置内容id
+        var index1 = $(".show_context").index(this);
+        var id = arr[index1].id;
+        //设置跳转地址
+        window.location.assign('monContent.html?id='+id);
+        
+    })
+
+</script>
+</html>
